@@ -13,63 +13,56 @@
 </head>
 <body>
     
-    <!-- Login Section Starts -->
-    <div class="login-section-wrapper">
-        <img src="./images/lisa-amann-jQtDWG7y_EE-unsplash.png" alt="Login Image" class="login-left-img">
-        <div class="login-form">
-            <div class="logo">
-                <img src="./images/site-logo.png" alt="Site Logo">
-            </div>
+    <!-- Signup Section Starts -->
+    <div class="signup-section-wrapper">
+        <div class="signup-form">
 
             <div class="login-header">
-                <h2>Log in</h2>
-                <p>Welcome back! Please enter your details.</p>
+                <h2>Sign up</h2>
             </div>
 
             <div class="form">
                 <form action="#" method="post">
                     <div class="form-control">
-                        <label for="email">Email</label>
+                        <label for="name">Name*</label>
+                        <input type="name" name="name" id="name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="email">Email*</label>
                         <input type="email" name="email" id="email" placeholder="Enter your email">
                     </div>
 
                     <div class="form-control">
-                        <label for="pwd">Password</label>
-                        <input type="password" name="pwd" id="pwd" placeholder="******">
+                        <label for="pwd">Password*</label>
+                        <input type="password" name="pwd" id="pwd" placeholder="Create a password">
+                        <span>Must be at least 8 characters.</span>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="rpwd">Repeat Password*</label>
+                        <input type="password" name="rpwd" id="rpwd" placeholder="Repeat a password">
+                        <span>Must be at least 8 characters.</span>
                     </div>
 
                     <div class="form-group">
-                        <div class="form-control">
-                            <input type="checkbox" name="remember" id="remember">
-                            <label for="remember">Remember for 30 days</label>
-                        </div>
-
-                        <a href="#">Forgot password?</a>
+                        <button type="submit" class="btn btn-submit">Create account</button>
                     </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-submit">Log in</button>
-                    </div>
+                    <a href="#" class="btn btn-google"><img src="./images/google-icon.png" alt="Google Sign up"/>Sign up with Google</a>
 
-                    <ul>
-                        <li>
-                            <a href="#"><img src="./images/google-icon.png" alt="Google Icon"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./images/fb-icon.png" alt="Facebook Icon"></a>
-                        </li>
-                    </ul>
-
-                    <p>Don’t have an account? <a href="./signup.html">Sign up</a></p>
+                    <p>Already have an account? <a href="#">Log in</a></p>
                 </form>
             </div>
 
             <div class="login-footer">
                 <p>© ErasmusLifeHousing</p>
+                <a href="mailto:help@erasmuslifehousing.com"><i class="fa fa-envelope"></i>help@erasmuslifehousing.com</a>
             </div>
         </div>
+        <img src="./images/megan-schultz-odwNnC8AfNE-unsplash.png" alt="Login Image" class="signup-right-img">
     </div>
-    <!-- Login Section Ends -->
+    <!-- Signup Section Ends -->
 
         
     <!-- JQuery Library File -->

@@ -278,7 +278,7 @@ a{
 
 .login-section-wrapper .login-form .form{
     max-width: 60%;
-    margin: 0 auto 30px;
+    margin: 0 auto;
 }
 
 .login-section-wrapper .login-form .form .form-control{
@@ -304,4 +304,284 @@ a{
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
+.login-section-wrapper .login-form .form .form-control input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.login-section-wrapper .login-form .form .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.login-section-wrapper .login-form .form .form-group .form-control{
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+}
+
+.login-section-wrapper .login-form .form .form-group .form-control input{
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.login-section-wrapper .login-form .form .form-group a{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.2em;
+    text-decoration: none;
+}
+
+.login-section-wrapper .login-form .form .form-group .form-control label{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+}
+
+.login-section-wrapper .login-form .form .form-group .btn-submit{
+    width: 100%;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--heading-color);
+    color: var(--white);
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-section-wrapper .login-form .form .form-group .btn-submit:hover{
+    background: var(--text-color-4);
+}
+
+.login-section-wrapper .login-form .form ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.login-section-wrapper .login-form .form ul li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+.login-section-wrapper .login-form .form ul li a{
+    padding: 10px 40px;
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    transition: all .3s;
+}
+
+.login-section-wrapper .login-form .form ul li a:hover{
+    background: var(--black);
+    border-color: var(--black);
+}
+
+.login-section-wrapper .login-form .form p{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color-3);
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.login-section-wrapper .login-form .form p a{
+    color: var(--heading-color);
+    font-size: 14px !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.login-section-wrapper .login-form .form p a:hover{
+    color: var(--black);
+}
+
+.login-section-wrapper .login-form .login-footer p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-3);
+    line-height: 1.2em;
+    text-align: center;
+}
 /* Login CSS Ends */
+
+/* Signup CSS Starts */
+
+.signup-section-wrapper{
+    background: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.signup-section-wrapper .signup-form,
+.signup-section-wrapper .signup-right-img{
+    width: 50%;
+}
+
+.signup-section-wrapper .signup-right-img{
+    padding: 20px;
+}
+
+.signup-section-wrapper .signup-form .login-header h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-color-4);
+    line-height: 1.2em;
+    margin-bottom: 40px;
+}
+
+.signup-section-wrapper .signup-form .login-header,
+.signup-section-wrapper .signup-form .form,
+.signup-section-wrapper .signup-form .login-footer{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.signup-section-wrapper .signup-form .form .form-control{
+    padding: 0;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.signup-section-wrapper .signup-form .form .form-control span,
+.signup-section-wrapper .signup-form .form .form-control label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.2em;
+    width: 100%;
+}
+
+.signup-section-wrapper .signup-form .form .form-control input{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+}
+
+.signup-section-wrapper .signup-form .form .form-control input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.signup-section-wrapper .signup-form .form .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.signup-section-wrapper .signup-form .form .form-group .form-control{
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+}
+
+.signup-section-wrapper .signup-form .form .form-group .btn-submit{
+    width: 100%;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--heading-color);
+    color: var(--white);
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.signup-section-wrapper .signup-form .form .form-group .btn-submit:hover{
+    background: var(--text-color-4);
+}
+
+.signup-section-wrapper .signup-form .form .btn-google{
+    width: 100%;
+    padding: 10px 18px;
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    background: var(--transparent);
+    color: var(--text-color-2);
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.signup-section-wrapper .signup-form .form .btn-google img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.signup-section-wrapper .signup-form .form .btn-google:hover{
+    background: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+}
+
+.signup-section-wrapper .signup-form .login-footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signup-section-wrapper .signup-form .form p{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color-3);
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-section-wrapper .signup-form .form p a{
+    color: var(--heading-color);
+    font-size: 14px !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.signup-section-wrapper .signup-form .login-footer p,
+.signup-section-wrapper .signup-form .login-footer a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-3);
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0;
+}
+
+.signup-section-wrapper .signup-form .login-footer a i{
+    margin-right: 5px;
+}
+
+.signup-section-wrapper .signup-form .login-footer a{
+    transition: all .3s;
+}
+
+.signup-section-wrapper .signup-form .login-footer a:hover{
+    color: var(--heading-color);
+}
+/* Signup CSS Ends */
