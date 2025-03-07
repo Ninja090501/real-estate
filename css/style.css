@@ -192,6 +192,8 @@
     --text-color-6: #7C7B7B;
     --text-color-7: #667085;
     --text-color-8: #D6DBEC;
+    --text-color-9: #52525B;
+    --text-color-10: #1D2939;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -1148,3 +1150,106 @@ a{
 }
 
 /* FAQ Section CSS Ends */
+
+/* Footer CSS Starts */
+
+.footer-section-wrapper{
+    padding: 40px 0;
+    background: var(--white);
+}
+
+.footer-section-wrapper .footer-info{
+    text-align: center;
+}
+
+.footer-section-wrapper .footer-info img{
+    width: 70%;
+}
+
+.footer-section-wrapper .footer-info h2{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-color-9);
+    line-height: 1.2em;
+    margin: 20px 0;
+}
+
+.footer-section-wrapper .footer-info ul{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section-wrapper .footer-info ul li{
+    list-style-type: none;
+    display: inline;
+    margin: 0 20px;  
+}
+
+.footer-section-wrapper .footer-info ul li a{
+    font-size: 16px;
+    color: var(--text-color-2);
+    transition: all .3s;
+}
+
+.footer-section-wrapper .footer-info ul li a:hover{
+    color: var(--heading-color);
+}
+
+.footer-section-wrapper .footer-navigation h2,
+.footer-section-wrapper .footer-resources h2{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-section-wrapper .footer-navigation ul{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section-wrapper .footer-navigation ul li{
+    list-style-type: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-section-wrapper .footer-navigation ul li:last-child{
+    margin-bottom: 0;
+}
+
+.footer-section-wrapper .footer-navigation ul li a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--text-color-10);
+    transition: all .3s;
+    width: 100%;
+}
+
+.footer-section-wrapper .footer-navigation ul li a:hover{
+    color: var(--heading-color);
+}
+
+.footer-section-wrapper .footer-resources p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-10);
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.footer-section-wrapper .footer-resources p a{
+    transition: all .3s;
+    color: var(--text-color-10);
+    text-decoration: none;
+}
+
+.footer-section-wrapper .footer-resources p a:hover{
+    color: var(--heading-color);
+}
+
+/* Footer CSS Ends */
