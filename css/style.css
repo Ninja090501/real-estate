@@ -194,6 +194,12 @@
     --text-color-8: #D6DBEC;
     --text-color-9: #52525B;
     --text-color-10: #1D2939;
+    --text-color-11: #6C6B6B;
+    --text-color-12: #A1A7B0;
+    --text-color-13: #8DA0E23B;
+    --text-color-14: #000F2D;
+    --text-color-15: #F2F4F7;
+    --text-color-16: #FFFFFFCC;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -207,7 +213,7 @@
 
 
 *{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -228,8 +234,16 @@ a{
     text-decoration: none;
 }
 
+a:focus,
+button:focus,
+input:focus,
+select:focus{
+    outline: none;
+    box-shadow: none;
+}
+
 .container{
-    max-width: 1170px;
+    max-width: 1170px !important;
     margin: 0 auto;
 }
 
@@ -1253,3 +1267,409 @@ a{
 }
 
 /* Footer CSS Ends */
+
+/* Index Page CSS Starts */
+
+.hero-section-wrapper{
+   background: var(--white);
+}
+
+.hero-section-wrapper .hero-section-row{
+    margin-left: calc((( 100vw - 1170px ) / 2 ) - 5px );
+}
+
+.hero-section-wrapper .hero-content{
+    padding: 60px 60px 0 0;
+}
+
+.hero-section-wrapper .hero-content h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-color-10);
+    line-height: 1.2em;
+    text-transform: capitalize;
+}
+
+.hero-section-wrapper .hero-content h2 span{
+    color: var(--heading-color);
+}
+
+.hero-section-wrapper .hero-content p{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.4em;
+    margin: 40px 0;
+}
+
+.hero-section-wrapper .hero-content .counters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hero-section-wrapper .hero-content .counters .box{
+    width: 33.33%;
+    text-align: center;
+}
+
+.hero-section-wrapper .hero-content .counters .box .count-number{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-wrapper .hero-content .counters .box .count-number h2,
+.hero-section-wrapper .hero-content .counters .box .count-number span{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+}
+
+.hero-section-wrapper .hero-content .counters .box .count-number span {
+    color: var(--heading-color);
+    margin-left: 5px;
+}
+
+.hero-section-wrapper .hero-content .counters .box p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-11);
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.hero-section-wrapper .search-box{
+    max-width: 770px;
+    margin: -180px auto 0;
+    padding: 20px;
+    border: 1px solid var(--text-color-12);
+    border-radius: 5px;
+    background: var(--white);
+}
+
+.hero-section-wrapper .search-box .search-header,
+.hero-section-wrapper .search-box form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-section-wrapper .search-box .search-header{
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.hero-section-wrapper .search-box .search-header h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-10);
+    line-height: 1.2em;
+}
+
+.hero-section-wrapper .search-box form .form-group select,
+.hero-section-wrapper .search-box form .form-group input {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-12);
+    background: var(--white);
+    border: 1px solid var(--text-color-12);
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 184px;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.hero-section-wrapper .search-box form .form-group input {
+    padding: 10px 15px 10px 40px;
+}
+
+.hero-section-wrapper .search-box form .form-group input::placeholder{
+    color: var(--text-color-12);
+}
+
+.hero-section-wrapper .search-box form .form-group.field-budget,
+.hero-section-wrapper .search-box form .form-group.field-checkin{
+    position: relative;
+}
+
+.hero-section-wrapper .search-box form .form-group.field-budget:after,
+.hero-section-wrapper .search-box form .form-group.field-checkin:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-size: 100% auto;
+    width: 21px;
+    height: 20px;
+}
+
+.hero-section-wrapper .search-box form .form-group.field-budget:after{
+    background: url('../images/currency-euro.png') no-repeat center center;
+}
+
+.hero-section-wrapper .search-box form .form-group.field-checkin:after{
+    background: url('../images/calendar-days.png') no-repeat center center;
+}
+
+.hero-section-wrapper .search-box form button.btn-submit{
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--heading-color);
+    background: var(--text-color-8);
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    transition: all .3s;
+    margin: 0;
+    width: 20%;
+}
+
+.hero-section-wrapper .search-box form button.btn-submit:hover{
+    background: var(--heading-color);
+    color: var(--white);
+}
+
+.aboutus-section-wrapper{
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.aboutus-section-wrapper .aboutus-img{
+    padding-right: 40px;
+}
+
+.aboutus-section-wrapper .aboutus-content{
+    padding-left: 40px;
+}
+
+.aboutus-section-wrapper .aboutus-content h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color-10);
+    line-height: 1.2em;
+}
+
+.aboutus-section-wrapper .aboutus-content h4{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.2em;
+}
+
+.aboutus-section-wrapper .aboutus-content p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color-2);
+    line-height: 1.4em;
+    margin: 30px 0;
+}
+
+.aboutus-section-wrapper .aboutus-content ul{
+    margin: 0;
+    padding: 0;
+}
+
+.aboutus-section-wrapper .aboutus-content ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 6px 10px 6px 30px;
+    border-radius: 16px;
+    background: var(--text-color-13);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--heading-color);
+    line-height: 1.2em;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.aboutus-section-wrapper .aboutus-content ul li:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    background: url('../images/check-circle.png') no-repeat center center;
+    background-size: 100% auto;
+    width: 12px;
+    height: 13px;
+    margin-top: -6.5px;
+}
+
+.reserve-rooms-section-wrapper{
+    padding: 100px 0px;
+    background: var(--white);
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms > h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color-10);
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list{
+    width: calc( 33.33% - 53.33px );
+    margin-right: 80px;
+    margin-bottom: 50px;
+    background: var(--white);
+    border-radius: 16px;
+    transition: all .3s;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list:hover{
+    box-shadow: 20px 15px 50px 0px #0000000D;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list:nth-of-type( 3n + 3 ){
+    margin-right: 0;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-image img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details{
+    padding: 20px;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading,
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-price{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading a.heading{
+    width: 90%;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading .wish-list{
+    width: 10%;
+    text-align: right;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading a.heading h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-14);
+    line-height: 1.2em;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading a.wish-list i{
+    color: var(--text-color-2);
+    font-size: 20px;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading a.heading:hover h2{
+    color: var(--heading-color);
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-heading a.wish-list:hover i{
+    color: var(--heading-color);
+} 
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-content{
+    margin: 10px 0;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-content p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color-14);
+    line-height: 1.4em;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-price h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--heading-color);
+    line-height: 1.2em;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-price span{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    background: var(--text-color-15);
+    line-height: 1.2em;
+    border-radius: 16px;
+}
+
+.reserve-rooms-section-wrapper .reserve-rooms .room-lists .list .room-details .room-price span img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.reservation-process-section-wrapper{
+    padding: 100px 0px;
+    background: var(--white);
+}
+
+.reservation-process-section-wrapper .reservation-process{
+    max-width: 770px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.reservation-process-section-wrapper .reservation-process h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.2em;
+}
+
+.reservation-process-section-wrapper .reservation-process h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color-10);
+    line-height: 1.2em;
+}
+
+.reservation-process-section-wrapper .process{
+    padding: 0 10px;
+}
+
+.reservation-process-section-wrapper .process h1{
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.reservation-process-section-wrapper .process h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color-11);
+    line-height: 1.2em;
+    margin: 10px 0 20px;
+}
+
+.reservation-process-section-wrapper .process p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.4em;
+}
+/* Index Page CSS Ends */
