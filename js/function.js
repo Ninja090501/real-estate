@@ -26,5 +26,34 @@
             startCounter(counter, targetValue);
         });
     };
+
+    // Testimonial JS
+    $('.testimonials').slick({
+      centerMode: true,
+      centerPadding: '15%',  // Adjust as needed
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,  // Corrected typo
+      autoplay: true,
+      autoplaySpeed: 2500,
+      speed: 1000,
+      dots: false,
+      arrows: false,
+      responsive: [
+          {
+              breakpoint: 991,
+              settings: {
+                  slidesToShow: 2
+              }
+          },
+          {
+              breakpoint: 767,
+              settings: {
+                  slidesToShow: 1
+              }
+          }
+      ]
+  });
+  
 	
 })(jQuery);
