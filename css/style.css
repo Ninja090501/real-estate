@@ -1319,19 +1319,22 @@ select:focus{
     margin: 40px 0;
 }
 
-.hero-section-wrapper .hero-content .counters{
+.hero-section-wrapper .hero-content .counters,
+.our-achivements-section-wrapper .achivement-content .counters{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
 }
 
-.hero-section-wrapper .hero-content .counters .box{
+.hero-section-wrapper .hero-content .counters .box,
+.our-achivements-section-wrapper .achivement-content .counters .box{
     width: 33.33%;
     text-align: center;
 }
 
-.hero-section-wrapper .hero-content .counters .box .count-number{
+.hero-section-wrapper .hero-content .counters .box .count-number,
+.our-achivements-section-wrapper .achivement-content .counters .box .count-number{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1339,19 +1342,23 @@ select:focus{
 }
 
 .hero-section-wrapper .hero-content .counters .box .count-number h2,
-.hero-section-wrapper .hero-content .counters .box .count-number span{
+.hero-section-wrapper .hero-content .counters .box .count-number span,
+.our-achivements-section-wrapper .achivement-content .counters .box .count-number h2,
+.our-achivements-section-wrapper .achivement-content .counters .box .count-number span{
     font-size: 36px;
     font-weight: 600;
     color: var(--text-color-2);
     line-height: 1.2em;
 }
 
-.hero-section-wrapper .hero-content .counters .box .count-number span {
+.hero-section-wrapper .hero-content .counters .box .count-number span,
+.our-achivements-section-wrapper .achivement-content .counters .box .count-number span {
     color: var(--heading-color);
     margin-left: 5px;
 }
 
-.hero-section-wrapper .hero-content .counters .box p{
+.hero-section-wrapper .hero-content .counters .box p,
+.our-achivements-section-wrapper .achivement-content .counters .box p{
     font-size: 16px;
     font-weight: 400;
     color: var(--text-color-11);
@@ -1787,11 +1794,88 @@ select:focus{
 
 /* About Us Page CSS Starts */
 
-.testimonials-white-section-wrapper{
-    padding: 80px 0;
+.about-us-hero-section-wrapper{
+    padding: 80px 0 20px;
     background: var(--white);
 }
 
+.about-us-hero-section-wrapper .about-us-heading h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--heading-color);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.about-us-hero-section-wrapper .about-us-heading{
+    padding-right: 80px;
+}
+
+.about-us-hero-section-wrapper .about-us-content{
+    padding-left: 80px;
+    padding-top: 80px;
+}
+
+.about-us-hero-section-wrapper .about-us-heading h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.about-us-hero-section-wrapper .about-us-content p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.4em;
+}
+
+.our-achivements-section-wrapper,
+.meet-our-section-wrapper,
+.testimonials-white-section-wrapper{
+    padding: 40px 0;
+    background: var(--white);
+}
+
+.testimonials-white-section-wrapper{
+    padding-bottom: 80px;
+}
+
+.our-achivements-section-wrapper .row{
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--text-color-5);
+    box-shadow: 0px 0px 0px 0px #00000040;
+}
+
+.our-achivements-section-wrapper .achivement-img{
+    padding-right: 20px;
+}
+
+.our-achivements-section-wrapper .achivement-content{
+    padding-left: 20px;
+}
+
+.our-achivements-section-wrapper .achivement-content h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.2em;
+}
+
+.our-achivements-section-wrapper .achivement-content p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.4em;
+    margin: 40px 0 30px;
+}
+
+.our-achivements-section-wrapper .achivement-img img{
+    border-radius: 16px;
+}
+
+.meet-our-section-wrapper .meet-our-header,
 .testimonials-white-section-wrapper .testimonials-header{
     max-width: 770px;
     margin: 0 auto 20px;
@@ -1805,11 +1889,76 @@ select:focus{
     color: var(--heading-color);
 }
 
+.meet-our-section-wrapper .meet-our-header h2,
 .testimonials-white-section-wrapper .testimonials-header h2{
     font-size: 32px;
     font-weight: 600;
     line-height: 1.2em;
     color: var(--text-color-10);
+}
+
+.meet-our-section-wrapper .meet-our-header h2{
+    margin-bottom: 40px;
+}
+
+.meet-our-section-wrapper .meet-our-header p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color-12);
+    line-height: 1.4em;
+    margin-bottom: 40px;
+}
+
+.meet-our-section-wrapper .team-lists{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meet-our-section-wrapper .team-lists .list{
+    width: calc( 25% - 60px );
+    margin-right: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.meet-our-section-wrapper .team-lists .list:nth-of-type( 4n + 4 ){
+    margin-right: 0;
+}
+
+.meet-our-section-wrapper .team-lists .list .img{
+    margin-bottom: 20px;
+}
+
+.meet-our-section-wrapper .team-lists .list .img a img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+.meet-our-section-wrapper .team-lists .list .content a{
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.meet-our-section-wrapper .team-lists .list .content a h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color-4);
+    line-height: 1.2em;
+}
+
+.meet-our-section-wrapper .team-lists .list .content a:hover h2{
+    color: var(--heading-color);
+}
+
+.meet-our-section-wrapper .team-lists .list .content h4{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--heading-color);
+    line-height: 1.2em;
 }
 
 .testimonials-white-section-wrapper .testimonials .slick-track{
@@ -1865,6 +2014,7 @@ select:focus{
     margin-top: 40px;
 }
 
+.about-us-hero-section-wrapper .about-us-content a.btn-showmore,
 .testimonials-white-section-wrapper .read-more .btn-showmore{
     font-size: 12px;
     font-weight: 500;
@@ -1876,10 +2026,13 @@ select:focus{
     transition: all .3s;
 }
 
+.about-us-hero-section-wrapper .about-us-content a.btn-showmore:hover,
 .testimonials-white-section-wrapper .read-more .btn-showmore:hover{
     background: var(--heading-color);
     color: var(--white);
     border-color: var(--heading-color);
 }
+
+
 
 /* About Us Page CSS Ends */
