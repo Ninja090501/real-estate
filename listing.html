@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./css/style.css">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="./bootstrap-5.3.1-dist/css/bootstrap.min.css">
+     <!-- FontAwesome CSS -->
+     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.js">
+
+    <!-- Slick JS CSS -->
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
+</head>
+<body>
+    
+    <!-- Header Section Starts -->
+    <div class="header-section-wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="Real Estate Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="menu-list">
+                        <ul>
+                            <li><a href="index.html" class="">Home</a></li>
+                            <li><a href="#" class="">Landlords</a></li>
+                            <li><a href="#" class="">Erasmus Life</a></li>
+                            <li><a href="about-us.html" class="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="login-section">
+                        <ul>
+                            <li><a href="login.html">Log in</a></li>
+                            <li><a href="#"><img src="./images/lang-icon.png" alt="Language Icon"></a></li>
+                        </ul>
+                        <a href="#" class="btn btn-rent">Rent a Room</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section Ends -->
+
+    <!-- Rooms Listing Section Starts -->
+    <div class="listing-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="searching-section">
+                        <form action="#">
+                            <div class="search-option">
+                                <h2>Location</h2>
+                                <div class="form-group">
+                                    <input type="checkbox" name="lisbon" id="lisbon">
+                                    <label for="lisbon">Lisbon</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="porto" id="porto">
+                                    <label for="porto">Porto</label>
+                                </div>
+                            </div>
+
+                            <div class="search-option">
+                                <h2>Budget</h2>
+                                <div class="form-group dates">
+                                    <input type="text" name="min" id="min" placeholder="Min">
+                                    <input type="text" name="max" id="max" placeholder="Max">
+                                </div>
+                                <div class="price-filter">
+                                    <div class="range-slider">
+                                        <!-- Price indicators -->
+                                        <div id="min-indicator" class="price-indicator" style="left: 0;">100$</div>
+                                        <div id="max-indicator" class="price-indicator" style="left: 100%;">$1000</div>
+                            
+                                        <!-- Minimum and Maximum range inputs -->
+                                        <input type="range" id="min-price" min="0" max="1500" value="100" step="1">
+                                        <input type="range" id="max-price" min="0" max="1500" value="1000" step="1">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="search-option">
+                                <h2>Dates</h2>
+                                <div class="form-group dates">
+                                    <input type="text" name="form" id="from" placeholder="From">
+                                    <input type="text" name="to" id="to" placeholder="To">
+                                </div>
+                            </div>
+
+                            <div class="search-option">
+                                <h2>Neighborhood</h2>
+                                <div class="form-group">
+                                    <input type="checkbox" name="almada" id="almada">
+                                    <label for="almada">Almada</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="amadora" id="amadora">
+                                    <label for="amadora">Amadora</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="anjos" id="anjos">
+                                    <label for="anjos">Anjos</label>
+                                </div>
+                                <a href="#" class="btn btn-showmore">Show more <i class="fa fa-angle-down"></i></a>
+                            </div>
+
+                            <div class="search-option">
+                                <h2>Room Type</h2>
+                                <div class="form-group">
+                                    <input type="checkbox" name="studio" id="studio">
+                                    <label for="studio">Studio</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="apartment" id="apartment">
+                                    <label for="apartment">Apartment</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="private-room" id="private-room">
+                                    <label for="private-room">Private Room</label>
+                                </div>
+                                <a href="#" class="btn btn-showmore">Show more <i class="fa fa-angle-down"></i></a>
+                            </div>
+
+                            <div class="search-option">
+                                <h2>Amenities</h2>
+                                <div class="form-group">
+                                    <input type="checkbox" name="heating" id="heating">
+                                    <label for="heating">Heating</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="dryer" id="dryer">
+                                    <label for="dryer">Dryer</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="air-conditioning" id="air-conditioning">
+                                    <label for="air-conditioning">Air Conditioning</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="washing-machine" id="washing-machine">
+                                    <label for="washing-machine">Washing Machine</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="dishwasher" id="dishwasher">
+                                    <label for="dishwasher">Dishwasher</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="private-bathroom" id="private-bathroom">
+                                    <label for="private-bathroom">Private bathroom</label>
+                                </div>
+                                <a href="#" class="btn btn-showmore">Show more <i class="fa fa-angle-down"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="listing-section">
+                        <div class="map">
+                            <img src="images/map.png" alt="Map Image">
+                            <div class="map-room-card">
+                                <div class="img">
+                                    <img src="images/RoomPhoto.png" alt="Room Image Map">
+                                </div>
+                                <div class="content">
+                                    <h2>Villa, The Arsana Estate</h2>
+                                    <div class="address">
+                                        <p>Jl. Kartika Plaza, 38/1</p>
+                                        <h2>500€</h2>
+                                    </div>
+                                    <div class="facility">
+                                        <ul>
+                                            <li><img src="images/Vector.png" alt="Bedroom">5</li>
+                                            <li><img src="images/arrows-pointing-out.png" alt="Arrow Point">200m2</li>
+                                            <li><img src="images/material-symbols_shower.png" alt="Shower">3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="listing">
+                            <div class="shorting">
+                                <div class="total-item">
+                                    <h2>344 Rentals</h2>
+                                </div>
+
+                                <div class="short">
+                                    <select name="sortby" id="sortby">
+                                        <option value="sortby">Sort by</option>
+                                        <option value="sortby1">Item 1</option>
+                                        <option value="sortby2">Item 2</option>
+                                        <option value="sortby3">Item 3</option>
+                                    </select>
+
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="list-type active" id="grid-view">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 5C6.46957 5 5.96086 5.21071 5.58579 5.58579C5.21071 5.96086 5 6.46957 5 7V9C5 9.53043 5.21071 10.0391 5.58579 10.4142C5.96086 10.7893 6.46957 11 7 11H9C9.53043 11 10.0391 10.7893 10.4142 10.4142C10.7893 10.0391 11 9.53043 11 9V7C11 6.46957 10.7893 5.96086 10.4142 5.58579C10.0391 5.21071 9.53043 5 9 5H7ZM7 13C6.46957 13 5.96086 13.2107 5.58579 13.5858C5.21071 13.9609 5 14.4696 5 15V17C5 17.5304 5.21071 18.0391 5.58579 18.4142C5.96086 18.7893 6.46957 19 7 19H9C9.53043 19 10.0391 18.7893 10.4142 18.4142C10.7893 18.0391 11 17.5304 11 17V15C11 14.4696 10.7893 13.9609 10.4142 13.5858C10.0391 13.2107 9.53043 13 9 13H7ZM13 7C13 6.46957 13.2107 5.96086 13.5858 5.58579C13.9609 5.21071 14.4696 5 15 5H17C17.5304 5 18.0391 5.21071 18.4142 5.58579C18.7893 5.96086 19 6.46957 19 7V9C19 9.53043 18.7893 10.0391 18.4142 10.4142C18.0391 10.7893 17.5304 11 17 11H15C14.4696 11 13.9609 10.7893 13.5858 10.4142C13.2107 10.0391 13 9.53043 13 9V7ZM13 15C13 14.4696 13.2107 13.9609 13.5858 13.5858C13.9609 13.2107 14.4696 13 15 13H17C17.5304 13 18.0391 13.2107 18.4142 13.5858C18.7893 13.9609 19 14.4696 19 15V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H15C14.4696 19 13.9609 18.7893 13.5858 18.4142C13.2107 18.0391 13 17.5304 13 17V15Z" fill="#B0BABF"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="list-type" id="list-view">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 6C5 5.73478 5.10536 5.48043 5.29289 5.29289C5.48043 5.10536 5.73478 5 6 5H18C18.2652 5 18.5196 5.10536 18.7071 5.29289C18.8946 5.48043 19 5.73478 19 6C19 6.26522 18.8946 6.51957 18.7071 6.70711C18.5196 6.89464 18.2652 7 18 7H6C5.73478 7 5.48043 6.89464 5.29289 6.70711C5.10536 6.51957 5 6.26522 5 6ZM5 10C5 9.73478 5.10536 9.48043 5.29289 9.29289C5.48043 9.10536 5.73478 9 6 9H18C18.2652 9 18.5196 9.10536 18.7071 9.29289C18.8946 9.48043 19 9.73478 19 10C19 10.2652 18.8946 10.5196 18.7071 10.7071C18.5196 10.8946 18.2652 11 18 11H6C5.73478 11 5.48043 10.8946 5.29289 10.7071C5.10536 10.5196 5 10.2652 5 10ZM5 14C5 13.7348 5.10536 13.4804 5.29289 13.2929C5.48043 13.1054 5.73478 13 6 13H18C18.2652 13 18.5196 13.1054 18.7071 13.2929C18.8946 13.4804 19 13.7348 19 14C19 14.2652 18.8946 14.5196 18.7071 14.7071C18.5196 14.8946 18.2652 15 18 15H6C5.73478 15 5.48043 14.8946 5.29289 14.7071C5.10536 14.5196 5 14.2652 5 14ZM5 18C5 17.7348 5.10536 17.4804 5.29289 17.2929C5.48043 17.1054 5.73478 17 6 17H18C18.2652 17 18.5196 17.1054 18.7071 17.2929C18.8946 17.4804 19 17.7348 19 18C19 18.2652 18.8946 18.5196 18.7071 18.7071C18.5196 18.8946 18.2652 19 18 19H6C5.73478 19 5.48043 18.8946 5.29289 18.7071C5.10536 18.5196 5 18.2652 5 18Z" fill="#B0BABF"/>
+                                                </svg>                                                    
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="items" id="grid">
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-1.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-2.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-3.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-4.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-5.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-6.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-7.png" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-4.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-6.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                        <ul>
+                                            <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="items" id="list">
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-1.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-2.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-3.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-4.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-5.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-6.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-7.png" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-4.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-img">
+                                        <img src="images/item-6.jpg" alt="Item">
+                                        <a href="#" class="heart">
+                                            <i class="fa fa-heart"></i>                             
+                                        </a>
+                                    </div>
+
+                                    <div class="item-head">
+                                        <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
+                                        <p>700€<span>/month</span></p>
+
+                                        <div class="item-content">
+                                            <p>R. Damasceno Monteiro, 1170 Lisboa</p>
+                                            <ul>
+                                                <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
+                                                <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Rooms Listing Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <div class="footer-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-info">
+                        <img src="./images/logo.png" alt="Site Logo">
+                        <h2>Find Your Dream Accommodation</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-navigation">
+                        <h2>Navigation</h2>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Erasmus Life Lisboa</a></li>
+                            <li><a href="#">Apply For Internship</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-navigation">
+                        <h2>Tenants</h2>
+                        <ul>
+                            <li><a href="#">Video Chat</a></li>
+                            <li><a href="#">Housing Guide</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-resources">
+                        <h2>Resources</h2>
+                        <p>Travessa da Cara, 14, 1200-089 Lisbon - Portugal</p>
+
+                        <p><a href="tel:+351 932 483 834">+351 932 483 834</a></p>
+                            
+                        <p><a href="mailto:hello@erasmuslifehousing.com">hello@erasmuslifehousing.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section Ends -->
+    
+    <!-- JQuery Library File -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="./js/jquery.slicknav.js"></script>
+    <!-- Smooth Scroll JS -->
+    <script src="./js/SmoothScroll.js"></script>
+    <!-- Slick JS JS -->
+     <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <!-- Main Custom JS -->
+    <script src="./js/function.js"></script>
+</body>
+</html>
