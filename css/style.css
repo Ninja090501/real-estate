@@ -207,6 +207,10 @@
     --text-color-21: #F6F8F9;
     --text-color-22: #E5E9EB;
     --text-color-23: #EAECF0;
+    --text-color-24: #EBEBEB;
+    --text-color-25: #F9FAFB;
+    --text-color-26: #F0E6E5;
+    --text-color-27: #A11F16;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -232,15 +236,14 @@
 .fa-solid,
 .far,
 .fa-regular {
-    font-family: 'Font Awesome 6 Free' !important;
-    font-weight: 900;
+    font-family: 'Font Awesome 6 Free' !important; 
 }
 
 .fab,
 .fa-brands {
     font-family: 'Font Awesome 6 Brands' !important; 
-    font-weight: 900;
 }
+
 
 ul,ol{
     margin: 0;
@@ -2688,3 +2691,314 @@ select:focus{
     margin-right: 5px;
 }
 /* Listing Page CSS Ends */
+
+/* Details Page CSS Starts */
+
+.details-section-wrapper{
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.details-section-wrapper .details-section .details-section-for > .slick-prev::before,
+.details-section-wrapper .details-section .details-section-for > .slick-next::before{
+    opacity: 0;
+}
+
+.details-section-wrapper .details-section .detail-slider-for{
+    margin-bottom: 20px;
+}
+
+.details-section-wrapper .details-section .detail-slider-for .slick-arrow{
+    z-index: 99;
+}
+
+.details-section-wrapper .details-section .detail-slider-for .slick-slide img{
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+
+.details-section-wrapper .details-section .detail-slider-nav .slick-slide img{
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.details-section-wrapper .details-section .detail-slider-nav.slick-slider{
+    margin: 0 -5px;
+}
+
+.details-section-wrapper .details-section .detail-slider-nav .slick-slide{
+    margin: 0 5px;
+}
+
+.details-section-wrapper .details-section .detail-slider-for .slick-arrow i.fa-chevron-left::before,
+.details-section-wrapper .details-section .detail-slider-for .slick-arrow i.fa-chevron-right::before{
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--white);
+    font-family: 'Font Awesome 6 Free' !important;
+}
+
+.details-section-wrapper .details-section .detail-slider-for .slick-arrow i.fa-chevron-left::before{
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.details-section-wrapper .details-section .detail-slider-for .slick-arrow i.fa-chevron-right::before{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.details-section-wrapper .details-section .details-content{
+    margin: 10px 0;
+}
+
+.details-section-wrapper .details-section .details-content .heading-price{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details-section-wrapper .details-section .details-content .heading-price h2{
+    width: 65%;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.details-section-wrapper .details-section .details-content .heading-price h4{
+    width: 35%;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    text-align: right;
+}
+
+.details-section-wrapper .details-section .details-content .heading-price h4 span{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color-11);
+}
+
+.details-section-wrapper .details-section .details-content .location p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-11);
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+.details-section-wrapper .details-section .details-content .location i{
+    font-size: 20px;
+}
+
+.details-section-wrapper .details-section .details-content .flexibility ul{
+    margin: 0;
+    padding: 0;
+}
+
+.details-section-wrapper .details-section .details-content .flexibility ul li{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--heading-color);
+    background: var(--text-color-8);
+    line-height: 1.2em;
+    padding: 2px 8px;
+    border-radius: 16px;
+    margin-right: 5px;
+}
+
+.details-section-wrapper .details-section .details-description,
+.details-section-wrapper .details-section .details-facilities,
+.details-section-wrapper .details-section .details-availability,
+.details-section-wrapper .details-section .details-rules{
+    padding: 15px 20px;
+    border: 1px solid var(--text-color-24);
+    border-radius: 10px;
+    background: var(--white);
+    margin-bottom: 10px;
+}
+
+.details-section-wrapper .details-section .details-description h5,
+.details-section-wrapper .details-section .details-facilities h5,
+.details-section-wrapper .details-section .details-availability h5,
+.details-section-wrapper .details-section .details-rules h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.details-section-wrapper .details-section .details-description p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+.details-section-wrapper .details-section .details-facilities div#facilities ul,
+.details-section-wrapper .details-section .details-rules #rules ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details-section-wrapper .details-section .details-facilities div#facilities ul li,
+.details-section-wrapper .details-section .details-rules #rules ul li{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    background: var(--text-color-15);
+    padding: 2px 8px 2px 6px;
+    border-radius: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevents wrapping of individual items */
+}
+
+.details-section-wrapper .details-section .details-facilities div#facilities ul #full-text.collapse{
+    display: none;
+}
+
+.details-section-wrapper .details-section .details-facilities div#facilities ul #full-text.collapse.show{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details-section-wrapper .details-section .details-facilities div#facilities ul li:last-child,
+.details-section-wrapper .details-section .details-rules #rules ul li:last-child{
+    margin-right: 0;
+}
+
+.details-section-wrapper .details-section .details-facilities div#facilities ul li img,
+.details-section-wrapper .details-section .details-rules #rules ul li img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.details-section-wrapper .details-section .details-description button,
+.details-section-wrapper .details-section .details-facilities button{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--heading-color);
+    background: var(--border-color-1);
+    padding: 4px 10px;
+    border: 1px solid var(--border-color-1);
+    border-radius: 16px;
+    transition: all .3s;
+}
+
+.details-section-wrapper .details-section .details-description button:hover,
+.details-section-wrapper .details-section .details-facilities button:hover{
+    background: var(--heading-color);
+    color: var(--white);
+    border-color: var(--heading-color);
+}
+
+.details-section-wrapper .details-section .details-description p#description .collapse,
+.details-section-wrapper .details-section .details-facilities div#facilities .collapse{
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    overflow: hidden;
+}
+
+.details-section-wrapper .details-section .details-description p#description .collapse.show,
+.details-section-wrapper .details-section .details-facilities div#facilities .collapse.show{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .content,
+.details-section-wrapper .details-section .details-availability .availability-content .calender{
+    width: 50%;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .content ul,
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul{
+    margin: 0;
+    padding: 0;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .content ul li,
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul li{
+    list-style-type: none;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .content ul li{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-11);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .content ul li span{
+    font-weight: 700;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .content ul li:last-child{
+    margin-bottom: 0;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul{
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul li{
+    width: 15%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--text-color);
+    background: var(--text-color-25);
+    line-height: 1.2em;
+    padding: 9px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul li:last-of-type( 6n + 6 ){
+    margin-right: 0;
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul li.reserved{
+    background: var(--text-color-26);
+    color: var(--text-color-27);
+}
+
+.details-section-wrapper .details-section .details-availability .availability-content .calender ul li.booked{
+    background: var(--text-color-11);
+    color: var(--text-color-24);
+}
+/* Details Page CSS Ends */

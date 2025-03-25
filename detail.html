@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="./bootstrap-5.3.1-dist/css/bootstrap.min.css">
+     <!-- FontAwesome CSS -->
+     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.js">
+
+    <!-- Slick JS CSS -->
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css">
+</head>
+<body>
+    
+    <!-- Header Section Starts -->
+    <div class="header-section-wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="Real Estate Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="menu-list">
+                        <ul>
+                            <li><a href="index.html" class="">Home</a></li>
+                            <li><a href="#" class="">Landlords</a></li>
+                            <li><a href="#" class="">Erasmus Life</a></li>
+                            <li><a href="about-us.html" class="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="login-section">
+                        <ul>
+                            <li><a href="login.html">Log in</a></li>
+                            <li><a href="#"><img src="./images/lang-icon.png" alt="Language Icon"></a></li>
+                        </ul>
+                        <a href="#" class="btn btn-rent">Rent a Room</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section Ends -->
+
+    <!-- Details Section Starts -->
+    <div class="details-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="details-section">
+                        <div class="detail-slider-for">
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 7.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 10.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 11.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 12.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 8.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 9.png" alt=""></div>
+                        </div>
+
+                        <div class="detail-slider-nav">
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 7.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 10.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 11.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 12.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 8.png" alt=""></div>
+                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 9.png" alt=""></div>
+                        </div>
+
+                        <div class="details-content">
+                            <div class="heading-price">
+                                <h2>Room 3 in Casa Monteiro II</h2>
+                                <h4>$450<span>/Bills included</span></h4>
+                            </div>
+
+                            <div class="location">
+                                <p><i class="fa fa-location-dot"></i> R. Damasceno Monteiro, 1170 Lisboa</p>
+                            </div>
+
+                            <div class="flexibility">
+                                <ul>
+                                    <li>4 bedrooms</li>
+                                    <li>150 m2</li>
+                                    <li>Private Bathroom</li>
+                                    <li>Furnished</li>
+                                    <li>Cleaning Included</li>
+                                    <li>Balcony</li>
+                                    <li>Bed Linen/Towels</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="details-description">
+                            <h5>Description</h5>
+                            <p id="description">
+                                <span id="short-text">Lorem ipsum dolor sit amet consectetur. Sit dui fermentum vitae in dui gravida lectus molestie</span>
+                                <!-- <span id="dots">...</span> -->
+                                <span id="full-text" class="collapse">
+                                    . Dui a netus interdum enim. Vitae id ornare amet curabitur cursus arcu ante sed. Orci ipsum libero sed in eget vitae. Nulla fringilla integer viverra aenean massa. Metus consequat purus enim tortor malesuada morbi. Eget mattis risus mauris egestas. Aenean quis amet habitant tortor facilisis viverra erat viverra velit. Velit mattis magna cursus purus vitae mauris senectus maed.
+                                </span>
+                            </p>
+                            <button class="btn btn-primary btn-sm" id="toggle-btn" data-bs-toggle="collapse" data-bs-target="#full-text">
+                                Show more <i class="fa fa-arrow-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="details-facilities">
+                            <h5>Facilities</h5>
+                            <div id="facilities">
+                                <ul id="facilities-list" class="facilities-inline">
+                                    <!-- Always visible items -->
+                                    <li><img src="images/mdi_couch-outline.png" alt="" /> Shared Living Room</li>
+                                    <li><img src="images/material-symbols-light_balcony.png" alt="" /> Balcony</li>
+                                    <li><img src="images/wifi.png" alt="" /> WiFi</li>
+                                    <li><img src="images/material-symbols-light_heat.png" alt="" /> Heating</li>
+                                    <li><img src="images/tabler_wash.png" alt="" /> Washing Machine</li>
+                                    <li><img src="images/material-symbols-light_ac-unit.png" alt="" /> Air Conditioner</li>
+                        
+                                    <!-- Collapsible Items -->
+                                    <span id="full-text" class="collapse">
+                                        <li><img src="images/mdi_couch-outline.png" alt="" /> Shared Living Room</li>
+                                        <li><img src="images/material-symbols-light_balcony.png" alt="" /> Balcony</li>
+                                        <li><img src="images/wifi.png" alt="" /> WiFi</li>
+                                        <li><img src="images/material-symbols-light_heat.png" alt="" /> Heating</li>
+                                        <li><img src="images/tabler_wash.png" alt="" /> Washing Machine</li>
+                                        <li><img src="images/material-symbols-light_ac-unit.png" alt="" /> Air Conditioner</li>
+                                        <li><img src="images/mdi_couch-outline.png" alt="" /> Shared Living Room</li>
+                                        <li><img src="images/material-symbols-light_balcony.png" alt="" /> Balcony</li>
+                                        <li><img src="images/wifi.png" alt="" /> WiFi</li>
+                                        <li><img src="images/material-symbols-light_heat.png" alt="" /> Heating</li>
+                                    </span>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-sm" id="facilities-toggle-btn" data-bs-toggle="collapse" data-bs-target="#full-text">
+                                Show more <i class="fa fa-arrow-down"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="details-availability">
+                            <h5>Availability</h5>
+                            <div class="availability-content">
+                                <div class="content">
+                                    <ul>
+                                        <li>Available From : <span>26.Februay 2077</span></li>
+                                        <li>Minimum Stay : <span>3 Months</span></li>
+                                        <li>Maximum Stay : <span>Not detriment</span></li>
+                                        <li>Calender Updated : <span>1 week ago</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="calender">
+                                    <ul>
+                                        <li class="reserved">Jan <br />500€</li>
+                                        <li class="reserved">Feb <br />700€</li>
+                                        <li>Mar <br />700€</li>
+                                        <li>Apr <br />700€</li>
+                                        <li>May <br />700€</li>
+                                        <li>Jun <br />700€</li>
+                                        <li class="booked">Jul <br />500€</li>
+                                        <li class="booked">Aug <br />500€</li>
+                                        <li class="booked">Sep <br />500€</li>
+                                        <li>Oct <br />500€</li>
+                                        <li>Nov <br />500€</li>
+                                        <li>Dec <br />500€</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-rules">
+                            <h5>Landlord rules</h5>
+                            <div id="rules">
+                                <ul>
+                                    <!-- Always visible items -->
+                                    <li><img src="images/mdi_smoking.png" alt="" /> No smoking allowed</li>
+                                    <li><img src="images/cil_dog.png" alt="" /> Pets are not allowed</li>
+                                    <li><img src="images/fluent_guest-20-regular.png" alt="" /> Overnight guests are allowed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Details Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <div class="footer-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-info">
+                        <img src="./images/logo.png" alt="Site Logo">
+                        <h2>Find Your Dream Accommodation</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-navigation">
+                        <h2>Navigation</h2>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Erasmus Life Lisboa</a></li>
+                            <li><a href="#">Apply For Internship</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-navigation">
+                        <h2>Tenants</h2>
+                        <ul>
+                            <li><a href="#">Video Chat</a></li>
+                            <li><a href="#">Housing Guide</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-resources">
+                        <h2>Resources</h2>
+                        <p>Travessa da Cara, 14, 1200-089 Lisbon - Portugal</p>
+
+                        <p><a href="tel:+351 932 483 834">+351 932 483 834</a></p>
+                            
+                        <p><a href="mailto:hello@erasmuslifehousing.com">hello@erasmuslifehousing.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section Ends -->
+    
+    <!-- JQuery Library File -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="./js/jquery.slicknav.js"></script>
+    <!-- Smooth Scroll JS -->
+    <script src="./js/SmoothScroll.js"></script>
+    <!-- Slick JS JS -->
+    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <!-- Main Custom JS -->
+    <script src="./js/function.js"></script>
+</body>
+</html>

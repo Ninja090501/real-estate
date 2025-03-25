@@ -1,13 +1,13 @@
 (function ($) {
     "use strict";
-	
-	var $window = $(window); 
-	var $body = $('body'); 
-	
-	function startCounter(element, target) {
+    
+    var $window = $(window);
+    var $body = $('body');
+    
+    function startCounter(element, target) {
         let count = 0;
-        let speed = 10; // Speed in milliseconds
-        let step = Math.ceil(target / 100); // Increment step
+        let speed = 10;
+        let step = Math.ceil(target / 100);
 
         let interval = setInterval(() => {
             count += step;
@@ -19,21 +19,21 @@
         }, speed);
     }
 
-    // Automatically start all counters on page load
     window.onload = function () {
         document.querySelectorAll(".counter").forEach(counter => {
             let targetValue = parseInt(counter.getAttribute("data-target"));
-            startCounter(counter, targetValue);
+            if (!isNaN(targetValue)) {
+                startCounter(counter, targetValue);
+            }
         });
     };
 
-    // Testimonial JS
     $('.testimonials').slick({
         centerMode: true,
-        centerPadding: '15%',  // Adjust as needed
+        centerPadding: '15%',
         slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: true,  // Corrected typo
+        infinite: true,
         autoplay: true,
         autoplaySpeed: 2500,
         speed: 1000,
@@ -42,106 +42,128 @@
         responsive: [
             {
                 breakpoint: 991,
-                settings: {
-                    slidesToShow: 2
-                }
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 767,
-                settings: {
-                    slidesToShow: 1
-                }
+                settings: { slidesToShow: 1 }
             }
         ]
     });
 
-    //JS for Change Grid to List
     document.addEventListener("DOMContentLoaded", function () {
         const listTypes = document.querySelectorAll(".list-type");
 
         listTypes.forEach(item => {
             item.addEventListener("click", function (event) {
                 event.preventDefault();
-                
-                // Remove 'active' class from all items
                 listTypes.forEach(el => el.classList.remove("active"));
-                
-                // Add 'active' class to the clicked item
                 this.classList.add("active");
             });
         });
     });
 
-    // Price Range
-    const minPrice = document.getElementById('min-price');
-    const maxPrice = document.getElementById('max-price');
-    const minIndicator = document.getElementById('min-indicator');
-    const maxIndicator = document.getElementById('max-indicator');
-    const rangeSlider = document.querySelector('.range-slider');
-    
-    const minGap = 10; // Minimum gap between sliders
-    
-    function updatePrices() {
-        let min = parseInt(minPrice.value);
-        let max = parseInt(maxPrice.value);
-    
-        // Ensure no overlap
-        if (max - min < minGap) {
-            if (event.target === minPrice) {
-                minPrice.value = max - minGap;
-            } else {
-                maxPrice.value = parseInt(minPrice.value) + minGap;
-            }
-        }
-    
-        // Update percentage variables for CSS
-        const minPercent = ((minPrice.value - minPrice.min) / (minPrice.max - minPrice.min)) * 100;
-        const maxPercent = ((maxPrice.value - maxPrice.min) / (maxPrice.max - maxPrice.min)) * 100;
-    
-        rangeSlider.style.setProperty('--min-percent', `${minPercent}`);
-        rangeSlider.style.setProperty('--max-percent', `${maxPercent}`);
-    
-        // Update price indicators
-        minIndicator.textContent = `$${minPrice.value}`;
-        maxIndicator.textContent = `$${maxPrice.value}`;
-    
-        // Update indicator positions
-        minIndicator.style.left = `${minPercent}%`;
-        maxIndicator.style.left = `${maxPercent}%`;
-    }
-    
-    // Event listeners
-    minPrice.addEventListener('input', updatePrices);
-    maxPrice.addEventListener('input', updatePrices);
-    
-    // Initial position setup
-    updatePrices();
+    document.addEventListener("DOMContentLoaded", function () {
+        const minPrice = document.getElementById('min-price');
+        const maxPrice = document.getElementById('max-price');
+        const minIndicator = document.getElementById('min-indicator');
+        const maxIndicator = document.getElementById('max-indicator');
+        const rangeSlider = document.querySelector('.range-slider');
 
-    // List & Grid View JS.
+        if (minPrice && maxPrice && minIndicator && maxIndicator && rangeSlider) {
+            const minGap = 10;
+
+            function updatePrices() {
+                let min = parseInt(minPrice.value);
+                let max = parseInt(maxPrice.value);
+                if (max - min < minGap) {
+                    if (event.target === minPrice) {
+                        minPrice.value = max - minGap;
+                    } else {
+                        maxPrice.value = parseInt(minPrice.value) + minGap;
+                    }
+                }
+                const minPercent = ((minPrice.value - minPrice.min) / (minPrice.max - minPrice.min)) * 100;
+                const maxPercent = ((maxPrice.value - maxPrice.min) / (maxPrice.max - maxPrice.min)) * 100;
+                rangeSlider.style.setProperty('--min-percent', `${minPercent}`);
+                rangeSlider.style.setProperty('--max-percent', `${maxPercent}`);
+                minIndicator.textContent = `$${minPrice.value}`;
+                maxIndicator.textContent = `$${maxPrice.value}`;
+                minIndicator.style.left = `${minPercent}%`;
+                maxIndicator.style.left = `${maxPercent}%`;
+            }
+
+            minPrice.addEventListener('input', updatePrices);
+            maxPrice.addEventListener('input', updatePrices);
+            updatePrices();
+        }
+    });
+
     document.addEventListener("DOMContentLoaded", function () {
         const gridBtn = document.getElementById("grid-view");
         const listBtn = document.getElementById("list-view");
-        const gridContent = document.querySelector("#grid"); // Assuming a container for grid
-        const listContent = document.querySelector("#list"); // Assuming a container for list
-    
-        // Show grid by default and hide list
-        gridContent.style.display = "flez";
-        listContent.style.display = "none";
-    
-        gridBtn.addEventListener("click", function () {
+        const gridContent = document.querySelector("#grid");
+        const listContent = document.querySelector("#list");
+
+        if (gridBtn && listBtn && gridContent && listContent) {
             gridContent.style.display = "flex";
             listContent.style.display = "none";
-            gridBtn.classList.add("active");
-            listBtn.classList.remove("active");
+
+            gridBtn.addEventListener("click", function () {
+                gridContent.style.display = "flex";
+                listContent.style.display = "none";
+                gridBtn.classList.add("active");
+                listBtn.classList.remove("active");
+            });
+
+            listBtn.addEventListener("click", function () {
+                listContent.style.display = "block";
+                gridContent.style.display = "none";
+                listBtn.classList.add("active");
+                gridBtn.classList.remove("active");
+            });
+        }
+    });
+
+    // Details Page Slider JS
+    $('.detail-slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: false,
+        prevArrow:'<button type="button" class="slick-prev pull-left"><i class="fa fa-chevron-left"></i></button>',
+        nextArrow:'<button type="button" class="slick-next pull-right"><i class="fa fa-chevron-right"></i></button>',
+        asNavFor: '.detail-slider-nav'
+    });
+    $('.detail-slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.detail-slider-for',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true
+    });
+
+    // Collapse Boxes of Content in Details Page.
+    document.addEventListener("DOMContentLoaded", function () {
+        let btn = document.getElementById("toggle-btn");
+        let btnFacility = document.getElementById("facilities-toggle-btn");
+        // let dots = document.getElementById("dots");
+        let fullText = document.getElementById("full-text");
+
+        // Listen for collapse events
+        fullText.addEventListener("show.bs.collapse", function () {
+            // dots.style.display = "none"; // Hide dots immediately
+            btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>"; // Change button text
+            btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>"; // Change button text
         });
-    
-        listBtn.addEventListener("click", function () {
-            listContent.style.display = "block";
-            gridContent.style.display = "none";
-            listBtn.classList.add("active");
-            gridBtn.classList.remove("active");
+
+        fullText.addEventListener("hide.bs.collapse", function () {
+            // dots.style.display = "inline"; // Show dots immediately
+            btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>"; // Change button text
+            btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>"; // Change button text
         });
     });
-  
-	
+
 })(jQuery);
