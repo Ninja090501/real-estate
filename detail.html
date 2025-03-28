@@ -11,6 +11,10 @@
      <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
      <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.js">
 
+     <link rel="stylesheet" href="./css/classic.css">
+     <link rel="stylesheet" href="./css/classic.date.css">
+ 
+
     <!-- Slick JS CSS -->
     <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css">
@@ -189,7 +193,69 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5"></div>
+                <div class="col-lg-5">
+                    <div class="other-details">
+                        <div class="booking-request">
+                            <div class="header">
+                                <h5>Booking Request</h5>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 12V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M16 6L12 2M12 2L8 6M12 2V15" stroke="#484848" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/Heart.png" alt="Heart Icon">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="booking-form">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <label for="input_from">Check In:</label>
+                                        <input type="text" class="form-control" id="input_from" placeholder="Check In">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input_to">Check Out:</label>
+                                        <input type="text" class="form-control" id="input_to" placeholder="Check Out">
+                                    </div>
+
+                                    <button class="btn btn-booking">Check Booking</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="location-request">
+                            <h5>Location</h5>
+                            
+                            <div class="location">
+                                <p><i class="fa fa-location-dot"></i> R. Damasceno Monteiro, 1170 Lisboa</p>
+                            </div>
+
+                            <div class="location-map">
+                                <img src="./images/map-2.png" alt="">
+                            </div>
+
+                            <div class="location-form">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <label for="location_search">Calculate route by public transport to:</label>
+                                        <input type="text" class="form-control" id="location_search" placeholder="Work/University">
+                                    </div>
+
+                                    <button class="btn btn-calc">Calculate</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -250,6 +316,8 @@
     
     <!-- JQuery Library File -->
     <script src="./js/jquery-1.12.4.min.js"></script>
+
+    <script src="./js/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="./bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
     <!-- Slick Nav JS -->
@@ -258,6 +326,10 @@
     <script src="./js/SmoothScroll.js"></script>
     <!-- Slick JS JS -->
     <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    
+    <script src="./js/picker.js"></script>
+    <script src="./js/picker.date.js"></script>
+        
     <!-- Main Custom JS -->
     <script src="./js/function.js"></script>
 </body>

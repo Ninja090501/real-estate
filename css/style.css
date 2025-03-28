@@ -2819,10 +2819,19 @@ select:focus{
     margin-right: 5px;
 }
 
+.details-section-wrapper .details-section{
+    margin-right: 15px;
+}
+
+.details-section-wrapper .other-details{
+    margin-left: 15px;
+}
+
 .details-section-wrapper .details-section .details-description,
 .details-section-wrapper .details-section .details-facilities,
 .details-section-wrapper .details-section .details-availability,
-.details-section-wrapper .details-section .details-rules{
+.details-section-wrapper .details-section .details-rules,
+.details-section-wrapper .other-details .booking-request{
     padding: 15px 20px;
     border: 1px solid var(--text-color-24);
     border-radius: 10px;
@@ -2833,7 +2842,8 @@ select:focus{
 .details-section-wrapper .details-section .details-description h5,
 .details-section-wrapper .details-section .details-facilities h5,
 .details-section-wrapper .details-section .details-availability h5,
-.details-section-wrapper .details-section .details-rules h5{
+.details-section-wrapper .details-section .details-rules h5,
+.details-section-wrapper .other-details .booking-request h5{
     font-size: 18px;
     font-weight: 600;
     color: var(--text-color);
@@ -3001,4 +3011,140 @@ select:focus{
     background: var(--text-color-11);
     color: var(--text-color-24);
 }
+
+.details-section-wrapper .other-details .booking-request{
+    border-color: var(--text-color-5);
+    box-shadow: 0px 4px 4px 3px #D2CDCD33;
+}
+
+.details-section-wrapper .other-details .booking-request .header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details-section-wrapper .other-details .booking-request .header ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.details-section-wrapper .other-details .booking-request .header ul li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.details-section-wrapper .other-details .booking-request .header ul li:last-child{
+    margin-right: 0;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group{
+    width: 48%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group label{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group input{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-7);
+    background: var(--transparent);
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    padding: 6px 40px;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group::before{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: url('../images/calendar-days.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group::after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url('../images/chevron-up.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group.calendar-open::after{
+    transform: rotate(180deg);
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form button{
+    width: 100%;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--heading-color);
+    color: var(--white);
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder{
+    max-width: 220px;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box{
+    padding: 0 5px;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table{
+    font-size: 12px;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker--focused .picker__day--highlighted, 
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--highlighted:hover, 
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--infocus:hover, 
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--outfocus:hover,
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--highlighted,
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table.picker--focused .picker__day--selected, 
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--selected, 
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--selected:hover{
+    background: var(--heading-color);
+    border-radius: 100px;
+    color: var(--white) !important;
+    border-color: var(--heading-color);
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--today:before{
+    display: none;
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day{
+    color: var(--text-color-12);
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--outfocus{
+    color: var(--text-color-15)
+}
+
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__footer{
+    display: none;
+}
+
 /* Details Page CSS Ends */
