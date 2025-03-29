@@ -2789,7 +2789,8 @@ select:focus{
     color: var(--text-color-11);
 }
 
-.details-section-wrapper .details-section .details-content .location p{
+.details-section-wrapper .details-section .details-content .location p,
+.details-section-wrapper .other-details .location-request .location p{
     font-size: 14px;
     font-weight: 500;
     color: var(--text-color-11);
@@ -2797,7 +2798,8 @@ select:focus{
     margin-bottom: 10px;
 }
 
-.details-section-wrapper .details-section .details-content .location i{
+.details-section-wrapper .details-section .details-content .location i,
+.details-section-wrapper .other-details .location-request .location i{
     font-size: 20px;
 }
 
@@ -2831,7 +2833,9 @@ select:focus{
 .details-section-wrapper .details-section .details-facilities,
 .details-section-wrapper .details-section .details-availability,
 .details-section-wrapper .details-section .details-rules,
-.details-section-wrapper .other-details .booking-request{
+.details-section-wrapper .other-details .booking-request,
+.details-section-wrapper .other-details .location-request,
+.details-section-wrapper .other-details .booking-points{
     padding: 15px 20px;
     border: 1px solid var(--text-color-24);
     border-radius: 10px;
@@ -2843,7 +2847,10 @@ select:focus{
 .details-section-wrapper .details-section .details-facilities h5,
 .details-section-wrapper .details-section .details-availability h5,
 .details-section-wrapper .details-section .details-rules h5,
-.details-section-wrapper .other-details .booking-request h5{
+.details-section-wrapper .other-details .booking-request h5,
+.details-section-wrapper .other-details .location-request h5,
+.details-section-wrapper .other-details .booking-points h5,
+.similar-property-section-wrapper .similar-property-section h2{
     font-size: 18px;
     font-weight: 600;
     color: var(--text-color);
@@ -2868,7 +2875,8 @@ select:focus{
 }
 
 .details-section-wrapper .details-section .details-facilities div#facilities ul li,
-.details-section-wrapper .details-section .details-rules #rules ul li{
+.details-section-wrapper .details-section .details-rules #rules ul li,
+.details-section-wrapper .other-details .booking-points ul li{
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -2897,7 +2905,8 @@ select:focus{
 }
 
 .details-section-wrapper .details-section .details-facilities div#facilities ul li img,
-.details-section-wrapper .details-section .details-rules #rules ul li img{
+.details-section-wrapper .details-section .details-rules #rules ul li img,
+.details-section-wrapper .other-details .booking-points ul li img{
     width: 12px;
     height: 12px;
     margin-right: 5px;
@@ -3040,27 +3049,31 @@ select:focus{
     margin-right: 0;
 }
 
-.details-section-wrapper .other-details .booking-request .booking-form form{
+.details-section-wrapper .other-details .booking-request .booking-form form,
+.details-section-wrapper .other-details .location-request .location-form form{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-.details-section-wrapper .other-details .booking-request .booking-form form .form-group{
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group,
+.details-section-wrapper .other-details .location-request .location-form form .form-group{
     width: 48%;
     margin-bottom: 40px;
     position: relative;
 }
 
-.details-section-wrapper .other-details .booking-request .booking-form form .form-group label{
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group label,
+.details-section-wrapper .other-details .location-request .location-form form .form-group label{
     font-size: 14px;
     font-weight: 500;
     color: var(--text-color-2);
     line-height: 1.2em;
 }
 
-.details-section-wrapper .other-details .booking-request .booking-form form .form-group input{
+.details-section-wrapper .other-details .booking-request .booking-form form .form-group input,
+.details-section-wrapper .other-details .location-request .location-form form .form-group input{
     font-size: 16px;
     font-weight: 400;
     color: var(--text-color-7);
@@ -3090,11 +3103,22 @@ select:focus{
     height: 20px;
 }
 
+.details-section-wrapper .other-details .location-request .location-form form .form-group::before{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: url('../images/search.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+}
+
 .details-section-wrapper .other-details .booking-request .booking-form form .form-group.calendar-open::after{
     transform: rotate(180deg);
 }
 
-.details-section-wrapper .other-details .booking-request .booking-form form button{
+.details-section-wrapper .other-details .booking-request .booking-form form button,
+.details-section-wrapper .other-details .location-request .location-form form button{
     width: 100%;
     padding: 10px 18px;
     border-radius: 8px;
@@ -3145,6 +3169,188 @@ select:focus{
 
 .details-section-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__footer{
     display: none;
+}
+
+.details-section-wrapper .other-details .location-request .location-map{
+    margin-bottom: 10px;
+}
+
+.details-section-wrapper .other-details .location-request .location-map img{
+    width: 100%;
+    max-height: 200px;
+}
+
+.details-section-wrapper .other-details .location-request .location-form form{
+    align-items: flex-end;
+}
+
+.details-section-wrapper .other-details .location-request .location-form form .form-group{
+    width: 68%;
+    margin-bottom: 0;
+}
+
+.details-section-wrapper .other-details .location-request .location-form form button{
+    width: 30%;
+    padding: 6px 18px;
+}
+
+.details-section-wrapper .other-details .booking-points{
+    padding: 10px;
+}
+
+.details-section-wrapper .other-details .booking-points ul{
+    margin: 0;
+    padding: 0;
+}
+
+.similar-property-section-wrapper{
+    padding: 20px 0 80px;
+    background: var(--white);
+}
+
+.similar-property-section-wrapper .similar-property-section > h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.similar-property-section-wrapper .similar-property-section .items{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item{
+    width: calc( 25% - 15px );
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid var(--text-color-22);
+    border-radius: 5px;
+    background: var(--white);
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item:nth-of-type( 4n + 4 ){
+    margin-right: 0;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-img{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-img img{
+    aspect-ratio: 1/0.7;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-img .heart{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all .3s;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-img .heart i{
+    color: var(--text-color);
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-img .heart:hover i{
+    color: var(--heading-color);
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-head{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-head a{
+    text-decoration: none;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-head h2{
+    width: 70%;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color-18);
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-head p{
+    width: 30%;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-color-12);
+    line-height: 1.2em;
+    text-align: right;
+    margin: 0;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-head p span{
+    font-weight: 400;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-content p{
+    font-size: 12px;
+    font-weight: 00;
+    color: var(--text-color-5);
+    line-height: 1.4em;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-content ul li{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+    background: var(--text-color-15);
+    border-radius: 16px;
+    padding: 2px 8px;
+    margin-right: 5px;
+}
+
+.similar-property-section-wrapper .similar-property-section .items .item .item-content ul li img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.similar-property-section-wrapper .similar-property-section .view-more{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.similar-property-section-wrapper .similar-property-section .view-more a{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color-2);
+    background: var(--white);
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    padding: 10px 18px;
+    transition: all .3s;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    text-decoration: none;
+}
+
+.similar-property-section-wrapper .similar-property-section .view-more a:hover{
+    background: var(--heading-color);
+    color: var(--white);
 }
 
 /* Details Page CSS Ends */
