@@ -45,10 +45,28 @@
                 <div class="col-lg-3">
                     <div class="login-section">
                         <ul>
-                            <li><a href="login.html">Log in</a></li>
+                            <!-- <li><a href="login.html">Log in</a></li> -->
                             <li><a href="#"><img src="./images/lang-icon.png" alt="Language Icon"></a></li>
                         </ul>
-                        <a href="#" class="btn btn-rent">Rent a Room</a>
+                        <a href="#" class="btn btn-user"><img src="images/Oval.png" alt="" /> Anna Karlsson <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="user-account-list">
+                            <ul class="user-menu">
+                                <li class="user-info">
+                                    <div class="user-img">
+                                        <a href="#"><img src="images/Oval.png" alt=""></a>
+                                    </div>
+    
+                                    <div class="user-content">
+                                        <a href="#"><h2>Anna Karlsson</h2></a>
+                                        <h5>anna@mail.com</h5>
+                                    </div>
+                                </li>
+                                <li class="user-menu-item"><a href="my-account.html"><img src="images/settings.png" alt="" /> Account</a></li>
+                                <li class="user-menu-item"><a href="#"><img src="images/arrow-up-on-square-stack.png" alt="" /> Room Applications</a></li>
+                                <li class="user-menu-item"><a href="#"><img src="images/Heart.png" alt="" /> Compare Favourites</a></li>
+                                <li class="user-menu-item"><a href="login.html"><img src="images/sign out.png" alt="" /> Sign Out</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,162 +75,203 @@
     <!-- Header Section Ends -->
 
     <!-- Details Section Starts -->
-    <div class="details-section-wrapper">
+    <div class="booking-process-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7">
-                    <div class="details-section">
-                        <div class="detail-slider-for">
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 7.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 10.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 11.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 12.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 8.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 9.png" alt=""></div>
-                        </div>
+                <div class="col-lg-6">
+                    <div class="booking-process-section">
+                        <form action="#">
+                            <div class="accordion" id="myAccordion">
+                                <!-- Accordion Item 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            1. Contact Information
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                                        <div class="accordion-body">
+                                            <div class="form-group">
+                                                <div class="form-control">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" name="name" id="name" placeholder="olivia@untitledui.com">
+                                                </div>
 
-                        <div class="detail-slider-nav">
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 7.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 10.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 11.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 12.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 8.png" alt=""></div>
-                            <div><img src="images/WhatsApp Image 2024-01-08 at 18.01 9.png" alt=""></div>
-                        </div>
+                                                <div class="form-control">
+                                                    <label for="sname">Surname</label>
+                                                    <input type="text" name="sname" id="sname" placeholder="olivia@untitledui.com">
+                                                </div>
+                                            </div>
 
-                        <div class="details-content">
-                            <div class="heading-price">
-                                <h2>Room 3 in Casa Monteiro II</h2>
-                                <h4>$450<span>/Bills included</span></h4>
-                            </div>
+                                            <div class="form-group">
+                                                <div class="form-control w-100">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" name="email" id="email" placeholder="olivia@untitledui.com">
+                                                </div>
+                                            </div>
 
-                            <div class="location">
-                                <p><i class="fa fa-location-dot"></i> R. Damasceno Monteiro, 1170 Lisboa</p>
-                            </div>
+                                            <div class="form-group telephone">
+                                                <div class="form-control w-100">
+                                                    <label for="mno">Telephone number</label>
+                                                    <select name="country-code" id="country-code">
+                                                        <option value="us">US</option>
+                                                        <option value="in">IN</option>
+                                                        <option value="uk">UK</option>
+                                                        <option value="cn">CN</option>
+                                                        <option value="af">af</option>
+                                                    </select>
+                                                    <input type="text" name="mno" id="mno" placeholder="+1(555)000-000">
+                                                </div>
+                                            </div>
 
-                            <div class="flexibility">
-                                <ul>
-                                    <li>4 bedrooms</li>
-                                    <li>150 m2</li>
-                                    <li>Private Bathroom</li>
-                                    <li>Furnished</li>
-                                    <li>Cleaning Included</li>
-                                    <li>Balcony</li>
-                                    <li>Bed Linen/Towels</li>
-                                </ul>
-                            </div>
-                        </div>
+                                            <h5>Room Application Form</h5>
 
-                        <div class="details-description">
-                            <h5>Description</h5>
-                            <p id="description">
-                                <span id="short-text">Lorem ipsum dolor sit amet consectetur. Sit dui fermentum vitae in dui gravida lectus molestie</span>
-                                <!-- <span id="dots">...</span> -->
-                                <span id="full-text" class="collapse">
-                                    . Dui a netus interdum enim. Vitae id ornare amet curabitur cursus arcu ante sed. Orci ipsum libero sed in eget vitae. Nulla fringilla integer viverra aenean massa. Metus consequat purus enim tortor malesuada morbi. Eget mattis risus mauris egestas. Aenean quis amet habitant tortor facilisis viverra erat viverra velit. Velit mattis magna cursus purus vitae mauris senectus maed.
-                                </span>
-                            </p>
-                            <button class="btn btn-primary btn-sm" id="toggle-btn" data-bs-toggle="collapse" data-bs-target="#full-text">
-                                Show more <i class="fa fa-arrow-down"></i>
-                            </button>
-                        </div>
+                                            <div class="form-group radios">
+                                                <div class="form-control">
+                                                    <label for="alone">Are you coming alone?</label>
+                                                    <input type="radio" name="alone" id="yes">Yes
+                                                    <input type="radio" name="alone" id="no">No
+                                                </div>
+                                            </div>
 
-                        <div class="details-facilities">
-                            <h5>Facilities</h5>
-                            <div id="facilities">
-                                <ul id="facilities-list" class="facilities-inline">
-                                    <!-- Always visible items -->
-                                    <li><img src="images/mdi_couch-outline.png" alt="" /> Shared Living Room</li>
-                                    <li><img src="images/material-symbols-light_balcony.png" alt="" /> Balcony</li>
-                                    <li><img src="images/wifi.png" alt="" /> WiFi</li>
-                                    <li><img src="images/material-symbols-light_heat.png" alt="" /> Heating</li>
-                                    <li><img src="images/tabler_wash.png" alt="" /> Washing Machine</li>
-                                    <li><img src="images/material-symbols-light_ac-unit.png" alt="" /> Air Conditioner</li>
-                        
-                                    <!-- Collapsible Items -->
-                                    <span id="full-text" class="collapse">
-                                        <li><img src="images/mdi_couch-outline.png" alt="" /> Shared Living Room</li>
-                                        <li><img src="images/material-symbols-light_balcony.png" alt="" /> Balcony</li>
-                                        <li><img src="images/wifi.png" alt="" /> WiFi</li>
-                                        <li><img src="images/material-symbols-light_heat.png" alt="" /> Heating</li>
-                                        <li><img src="images/tabler_wash.png" alt="" /> Washing Machine</li>
-                                        <li><img src="images/material-symbols-light_ac-unit.png" alt="" /> Air Conditioner</li>
-                                        <li><img src="images/mdi_couch-outline.png" alt="" /> Shared Living Room</li>
-                                        <li><img src="images/material-symbols-light_balcony.png" alt="" /> Balcony</li>
-                                        <li><img src="images/wifi.png" alt="" /> WiFi</li>
-                                        <li><img src="images/material-symbols-light_heat.png" alt="" /> Heating</li>
-                                    </span>
-                                </ul>
-                            </div>
-                            <button class="btn btn-primary btn-sm" id="facilities-toggle-btn" data-bs-toggle="collapse" data-bs-target="#full-text">
-                                Show more <i class="fa fa-arrow-down"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="details-availability">
-                            <h5>Availability</h5>
-                            <div class="availability-content">
-                                <div class="content">
-                                    <ul>
-                                        <li>Available From : <span>26.Februay 2077</span></li>
-                                        <li>Minimum Stay : <span>3 Months</span></li>
-                                        <li>Maximum Stay : <span>Not detriment</span></li>
-                                        <li>Calender Updated : <span>1 week ago</span></li>
-                                    </ul>
+                                            <div class="form-group radios">
+                                                <div class="form-control">
+                                                    <label for="work-study">Do you study or work?</label>
+                                                    <input type="radio" name="work-study" id="work">Work
+                                                    <input type="radio" name="work-study" id="study">Study
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="form-control w-100">
+                                                    <label for="university">At which university do you study</label>
+                                                    <select name="university" id="university">
+                                                        <option value="">Select team member</option>
+                                                        <option value="1">University</option>
+                                                        <option value="2">University 2</option>
+                                                        <option value="3">University 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="form-control w-100">
+                                                    <label for="yourself">Tell us about yourself</label>
+                                                    <textarea name="yourself" id="yourself" rows="4" placeholder="Enter a description..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
+                                <!-- Accordion Item 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            2. Payment
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                        <div class="accordion-body">
+                                            <div class="payment-methods">
+                                                <div class="methods">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="images/visa-logo.png" alt="">
+                                                                Visa
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="images/ApplePay.png" alt="">
+                                                                Apple Pay
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="images/PayPal.png" alt="">
+                                                                PayPal
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                <div class="calender">
-                                    <ul>
-                                        <li class="reserved">Jan <br />500€</li>
-                                        <li class="reserved">Feb <br />700€</li>
-                                        <li>Mar <br />700€</li>
-                                        <li>Apr <br />700€</li>
-                                        <li>May <br />700€</li>
-                                        <li>Jun <br />700€</li>
-                                        <li class="booked">Jul <br />500€</li>
-                                        <li class="booked">Aug <br />500€</li>
-                                        <li class="booked">Sep <br />500€</li>
-                                        <li>Oct <br />500€</li>
-                                        <li>Nov <br />500€</li>
-                                        <li>Dec <br />500€</li>
-                                    </ul>
+                                                <div class="cards">
+                                                    <h2>Credit Card</h2>
+                                                    <h5>Mastercard, Visa, American Amex</h5>
+                                                </div>
+
+
+                                                <div class="form-group credit-card">
+                                                    <div class="form-control w-100">
+                                                        <label for="cardno">Card number</label>
+                                                        <input type="text" name="cardno" id="cardno" placeholder="Card number">
+                                                        <i class="fa-regular fa-circle-question"></i>
+                                                        <p>This is Custom Message.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="form-control">
+                                                        <label for="ex-date">Expiry Date</label>
+                                                        <input type="text" name="ex-date" id="ex-date" placeholder="MM/YY">
+                                                    </div>
+    
+                                                    <div class="form-control">
+                                                        <label for="securityno">Security number</label>
+                                                        <input type="text" name="securityno" id="securityno" placeholder="XXX">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group remember-payment">
+                                                    <div class="form-control w-100">
+                                                        <input type="checkbox" name="rememberpayment" id="rememberpayment">
+                                                        <label for="rememberpayment">Remember my payment details</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Accordion Item 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            3. Cancellation Policy
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                By selecting the button below, I agree to the Erasmus Life Housing rules,  Booking and Refund rules.
+                                                <br />
+                                                <br />
+                                                I also agree to the <a href="#">updated  Terms of Service</a>, <a href="#">Payments Terms of Service</a>, and I acknowledge the <a href="#">Privacy Police</a>.  
+                                            </p>
+
+                                            <div class="submit-btn">
+                                                <button class="btn btn-submit">Confirm and Book</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="details-rules">
-                            <h5>Landlord rules</h5>
-                            <div id="rules">
-                                <ul>
-                                    <!-- Always visible items -->
-                                    <li><img src="images/mdi_smoking.png" alt="" /> No smoking allowed</li>
-                                    <li><img src="images/cil_dog.png" alt="" /> Pets are not allowed</li>
-                                    <li><img src="images/fluent_guest-20-regular.png" alt="" /> Overnight guests are allowed</li>
-                                </ul>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="other-details position-relative h-100 w-100">
+                <div class="col-lg-6">
+                    <div class="other-details">
                         <div class="booking-request">
-                            <div class="header">
-                                <h5>Booking Request</h5>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 12V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12M16 6L12 2M12 2L8 6M12 2V15" stroke="#484848" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </a>
-                                    </li>
 
-                                    <li>
-                                        <a href="#">
-                                            <img src="images/Heart.png" alt="Heart Icon">
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="booking-img">
+                                <img src="images/item-6.jpg" alt="">
+                            </div>
+
+                            <div class="booking-info">
+                                <h2>Room 7 in Casa Monteiro II</h2>
+                                <p><i class="fa fa-location-dot"></i> R. Damasceno Monteiro, 1170 Lisboa</p>
                             </div>
 
                             <div class="booking-form">
@@ -226,42 +285,39 @@
                                         <input type="text" class="form-control" id="input_to" placeholder="Check Out">
                                     </div>
 
-                                    <button class="btn btn-booking">Check Booking</button>
-                                </form>
-                            </div>
-                        </div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Price Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="price-desc">Monthly (for 1 Person)</td>
+                                                <td class="price">550€</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-desc">Bills (Gas, Media, Cleaning)</td>
+                                                <td class="price">30-40€</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="price-desc">Fee</td>
+                                                <td class="price">75€</td>
+                                            </tr>
+                                            <tr class="total">
+                                                <td class="price-desc">Total</td>
+                                                <td class="price">1600€</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                        <div class="location-request">
-                            <h5>Location</h5>
-                            
-                            <div class="location">
-                                <p><i class="fa fa-location-dot"></i> R. Damasceno Monteiro, 1170 Lisboa</p>
-                            </div>
-
-                            <div class="location-map">
-                                <img src="./images/map-2.png" alt="">
-                            </div>
-
-                            <div class="location-form">
-                                <form action="#">
-                                    <div class="form-group">
-                                        <label for="location_search">Calculate route by public transport to:</label>
-                                        <input type="text" class="form-control" id="location_search" placeholder="Work/University">
+                                    <div class="form-group promo-code w-100">
+                                        <label for="promocode">Add Promo Code</label>
+                                        <input type="text" class="form-control" id="promocode" placeholder="3X5P5NKLMN">
+                                        <button class="btn btn-submit">Apply</button>
                                     </div>
-
-                                    <button class="btn btn-calc">Calculate</button>
                                 </form>
                             </div>
-
-                        </div>
-
-                        <div class="booking-points w-100 position-absolute bottom-0 left-0 right-0">
-                            <ul>
-                                <li><img src="images/check-circle.png" alt=""> Professional Team</li>
-                                <li><img src="images/check-circle.png" alt=""> Book a Call</li>
-                                <li><img src="images/check-circle.png" alt=""> Verified Room</li>
-                                <li><img src="images/check-circle.png" alt=""> Fast and Secure Booking</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -269,111 +325,6 @@
         </div>
     </div>
     <!-- Details Section Ends -->
-
-    <!-- Similar Properties Section Starts -->
-    <div class="similar-property-section-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="similar-property-section">
-                        <h2>Similar Properties in Lisbon</h2>
-
-                        <div class="items">
-                            <div class="item">
-                                <div class="item-img">
-                                    <img src="images/item-1.jpg" alt="Item">
-                                    <a href="#" class="heart">
-                                        <i class="fa fa-heart"></i>                             
-                                    </a>
-                                </div>
-
-                                <div class="item-head">
-                                    <a href="detail.html"><h2>Room 7 in Casa Monteiro II</h2></a>
-                                    <p>700€<span>/month</span></p>
-                                </div>
-
-                                <div class="item-content">
-                                    <p>R. Damasceno Monteiro, 1170 Lisboa</p>
-                                    <ul>
-                                        <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
-                                        <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item-img">
-                                    <img src="images/item-2.jpg" alt="Item">
-                                    <a href="#" class="heart">
-                                        <i class="fa fa-heart"></i>                             
-                                    </a>
-                                </div>
-
-                                <div class="item-head">
-                                    <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
-                                    <p>700€<span>/month</span></p>
-                                </div>
-
-                                <div class="item-content">
-                                    <p>R. Damasceno Monteiro, 1170 Lisboa</p>
-                                    <ul>
-                                        <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
-                                        <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item-img">
-                                    <img src="images/item-3.jpg" alt="Item">
-                                    <a href="#" class="heart">
-                                        <i class="fa fa-heart"></i>                             
-                                    </a>
-                                </div>
-
-                                <div class="item-head">
-                                    <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
-                                    <p>700€<span>/month</span></p>
-                                </div>
-
-                                <div class="item-content">
-                                    <p>R. Damasceno Monteiro, 1170 Lisboa</p>
-                                    <ul>
-                                        <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
-                                        <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item-img">
-                                    <img src="images/item-4.jpg" alt="Item">
-                                    <a href="#" class="heart">
-                                        <i class="fa fa-heart"></i>                             
-                                    </a>
-                                </div>
-
-                                <div class="item-head">
-                                    <a href="#"><h2>Room 7 in Casa Monteiro II</h2></a>
-                                    <p>700€<span>/month</span></p>
-                                </div>
-
-                                <div class="item-content">
-                                    <p>R. Damasceno Monteiro, 1170 Lisboa</p>
-                                    <ul>
-                                        <li><img src="images/building-storefront.png" alt="Bill included">Bill included</li>
-                                        <li><img src="images/check-badge.png" alt="Bill included">ELL Verified</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="view-more">
-                            <a href="#">Find More Rooms</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Similar Properties Section Ends -->
 
     <!-- Footer Section Starts -->
     <div class="footer-section-wrapper">

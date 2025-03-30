@@ -54,13 +54,15 @@
     document.addEventListener("DOMContentLoaded", function () {
         const listTypes = document.querySelectorAll(".list-type");
 
-        listTypes.forEach(item => {
-            item.addEventListener("click", function (event) {
-                event.preventDefault();
-                listTypes.forEach(el => el.classList.remove("active"));
-                this.classList.add("active");
+        if (listTypes.length > 0) {  // Added null check
+            listTypes.forEach(item => {
+                item.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    listTypes.forEach(el => el.classList.remove("active"));
+                    this.classList.add("active");
+                });
             });
-        });
+        }
     });
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -105,7 +107,7 @@
         const gridContent = document.querySelector("#grid");
         const listContent = document.querySelector("#list");
 
-        if (gridBtn && listBtn && gridContent && listContent) {
+        if (gridBtn && listBtn && gridContent && listContent) {  // Added null check
             gridContent.style.display = "flex";
             listContent.style.display = "none";
 
@@ -149,21 +151,19 @@
     document.addEventListener("DOMContentLoaded", function () {
         let btn = document.getElementById("toggle-btn");
         let btnFacility = document.getElementById("facilities-toggle-btn");
-        // let dots = document.getElementById("dots");
         let fullText = document.getElementById("full-text");
 
-        // Listen for collapse events
-        fullText.addEventListener("show.bs.collapse", function () {
-            // dots.style.display = "none"; // Hide dots immediately
-            btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>"; // Change button text
-            btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>"; // Change button text
-        });
+        if (btn && btnFacility && fullText) {  // Added null check
+            fullText.addEventListener("show.bs.collapse", function () {
+                btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
+                btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
+            });
 
-        fullText.addEventListener("hide.bs.collapse", function () {
-            // dots.style.display = "inline"; // Show dots immediately
-            btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>"; // Change button text
-            btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>"; // Change button text
-        });
+            fullText.addEventListener("hide.bs.collapse", function () {
+                btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
+                btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
+            });
+        }
     });
 
     $(document).ready(function () {
@@ -173,42 +173,71 @@
         var to_$input = $('#input_to').pickadate(),
             to_picker = to_$input.pickadate('picker');
     
-        // Check if there’s a “from” or “to” date to start with.
-        if (from_picker.get('value')) {
-            to_picker.set('min', from_picker.get('select'));
-        }
-        if (to_picker.get('value')) {
-            from_picker.set('max', to_picker.get('select'));
-        }
-    
-        // When something is selected, update the “from” and “to” limits.
-        from_picker.on('set', function (event) {
-            if (event.select) {
+        if (from_picker && to_picker) {  // Added null check
+            if (from_picker.get('value')) {
                 to_picker.set('min', from_picker.get('select'));
-            } else if ('clear' in event) {
-                to_picker.set('min', false);
             }
-        });
-        to_picker.on('set', function (event) {
-            if (event.select) {
+            if (to_picker.get('value')) {
                 from_picker.set('max', to_picker.get('select'));
-            } else if ('clear' in event) {
-                from_picker.set('max', false);
+            }
+
+            from_picker.on('set', function (event) {
+                if (event.select) {
+                    to_picker.set('min', from_picker.get('select'));
+                } else if ('clear' in event) {
+                    to_picker.set('min', false);
+                }
+            });
+            to_picker.on('set', function (event) {
+                if (event.select) {
+                    from_picker.set('max', to_picker.get('select'));
+                } else if ('clear' in event) {
+                    from_picker.set('max', false);
+                }
+            });
+
+            function toggleIconRotation(input) {
+                input.on('open', function () {
+                    input.$node.closest('.form-group').addClass('calendar-open');
+                });
+                input.on('close', function () {
+                    input.$node.closest('.form-group').removeClass('calendar-open');
+                });
+            }
+
+            toggleIconRotation(from_picker);
+            toggleIconRotation(to_picker);
+        }
+    });
+
+    // Header User Dropdown JS.
+    document.addEventListener("DOMContentLoaded", function () {
+        const userBtn = document.querySelector(".btn-user");
+        const userAccountList = document.querySelector(".user-account-list");
+        const arrowIcon = userBtn.querySelector(".fa-chevron-down");
+        
+        userBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            userAccountList.classList.toggle("active");
+            
+            if (userAccountList.classList.contains("active")) {
+                arrowIcon.style.transition = "transform 0.3s ease";
+                arrowIcon.style.transform = "rotate(180deg)";
+            } else {
+                arrowIcon.style.transition = "transform 0.3s ease";
+                arrowIcon.style.transform = "rotate(360deg)";
             }
         });
+        
+        // Close the menu if clicked outside
+        document.addEventListener("click", function (event) {
+            if (!userBtn.contains(event.target) && !userAccountList.contains(event.target)) {
+                userAccountList.classList.remove("active");
+                arrowIcon.style.transition = "transform 0s";
+                arrowIcon.style.transform = "rotate(0deg)";
+            }
+        });
+    });   
     
-        // Rotate arrow icon when calendar opens and closes
-        function toggleIconRotation(input) {
-            input.on('open', function () {
-                input.$node.closest('.form-group').addClass('calendar-open');
-            });
-            input.on('close', function () {
-                input.$node.closest('.form-group').removeClass('calendar-open');
-            });
-        }
-    
-        toggleIconRotation(from_picker);
-        toggleIconRotation(to_picker);
-    });
 
 })(jQuery);

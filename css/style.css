@@ -211,6 +211,10 @@
     --text-color-25: #F9FAFB;
     --text-color-26: #F0E6E5;
     --text-color-27: #A11F16;
+    --text-color-28: #98A2B3;
+    --text-color-29: #999999;
+    --text-color-30: #9BA7D2;
+    --text-color-31: #F9F5FF;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -1088,7 +1092,8 @@ select:focus{
     margin: 0 10px;
 }
 
-.header-section-wrapper .login-section .btn-rent{
+.header-section-wrapper .login-section .btn-rent,
+.header-section-wrapper .login-section .btn-user{
     font-size: 16px;
     font-weight: 600;
     color: var(--text-color-2);
@@ -1107,6 +1112,108 @@ select:focus{
     border-color: var(--heading-color);
 }
 
+.header-section-wrapper .login-section .btn-user{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header-section-wrapper .login-section .btn-user img{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.header-section-wrapper .login-section .btn-user i{
+    margin-left: 10px;
+}
+
+.header-section-wrapper .login-section{
+    position: relative;
+} 
+
+.header-section-wrapper .login-section .user-account-list{
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    z-index: 10;
+    display: none;
+}
+
+.header-section-wrapper .login-section .user-account-list.active{
+    display: block;
+}
+
+.header-section-wrapper .login-section .user-account-list ul{
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    border: 1px solid var(--border-color-1);
+    border-radius: 10px;
+    box-shadow: 0px 9.08px 38.78px 0px #00000017;
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 12px;
+    border-bottom: 1px solid var(--text-color-28);
+    margin: 0;
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-info .user-img a img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-info .user-content a h2{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-info .user-content a:hover h2{
+    color: var(--heading-color);
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-info .user-content h5{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-29);
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-menu-item{
+    margin: 0;
+    width: 100%;
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-menu-item a{
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: all .3s;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.header-section-wrapper .login-section .user-account-list ul li.user-menu-item a img{
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
 /* Header CSS Ends */
 
 /* FAQ Section CSS Starts */
@@ -3354,3 +3461,518 @@ select:focus{
 }
 
 /* Details Page CSS Ends */
+
+/* Booking Process Page CSS Starts */
+
+.booking-process-wrapper{
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item{
+    padding: 15px;
+    border: 1px solid var(--text-color-24);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item h2 button,
+.booking-process-wrapper .booking-process-section .accordion .accordion-item h2 button.accordion-button:not(.collapsed){
+    padding: 0;
+    background: var(--transparent);
+    border: 0;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body{
+    padding: 0;
+    margin-top: 20px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group .form-control{
+    width: 48%;
+    padding: 0;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group .form-control label,
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.radios .form-control,
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code label{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.2em;
+    width: 100%;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group .form-control input,
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group .form-control select,
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group .form-control textarea,
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code input{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 8px 15px;
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code::before,
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code::after{
+    display: none;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code input{
+    width: 82%;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code label{
+    margin-bottom: 5px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code button{
+    width: 16%;
+    padding: 8px 18px !important;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.telephone .form-control{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.telephone .form-control label{
+    margin-bottom: 5px;
+}
+
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.telephone .form-control select{
+    width: 12%;
+    padding: 8px;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.telephone .form-control select option{
+    text-transform: uppercase;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.telephone .form-control input{
+    width: 88%;
+    padding: 5.5px 8px;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group .form-control textarea{
+    resize: none;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin: 10px 0;   
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.radios .form-control{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .form-group.radios .form-control input{
+    width: auto;
+    margin: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .methods ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .methods ul li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 32%;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .methods ul li a{
+    width: 100%;
+    padding: 30px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    background: var(--white);
+    border: 1px solid var(--text-color-30);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .methods ul li a:hover{
+    color: var(--heading-color);
+    background: var(--text-color-31);
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .methods ul li a img{
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .cards{
+    padding: 15px 30px;
+    background: url('../images/_Checkbox base.png') no-repeat center left;
+    background-size: 17px auto;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .cards h2{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .cards h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.credit-card .form-control{
+    position: relative;
+}
+
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.credit-card .form-control input{
+    padding: 8px 50px;
+    background: url('../images/Payment method icon.png') no-repeat center left;
+    background-size: 34px auto;
+    background-position: 8px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.credit-card .form-control i{
+    color: var(--text-color-30);
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
+    transition: all 3s ease-in-out;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.credit-card .form-control p{
+    padding: 5px;
+    max-width: 100px;
+    text-align: center;
+    background: var(--heading-color);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4em;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    margin: 0;
+    display: none;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.credit-card .form-control i:hover + p{
+    display: block;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.remember-payment .form-control{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+} 
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.remember-payment .form-control input[type="checkbox"]{
+    display: none;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.remember-payment label{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+    position: relative;
+    cursor: pointer;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .payment-methods .form-group.remember-payment label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--text-color-12);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body input:checked + label:after {
+    content: '\f00c';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px solid var(--heading-color);
+    background: var(--text-color-19);
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    font-family: 'Font Awesome 6 Free' !important;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body p,
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body a{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color); 
+    line-height: 1.4em;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body a{
+    color: var(--heading-color);
+    text-decoration: none;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .submit-btn{
+    text-align: right;
+}
+
+.booking-process-wrapper .booking-process-section .accordion .accordion-item .accordion-body .submit-btn button.btn-submit,
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--heading-color);
+    color: var(--white);
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.booking-process-wrapper .other-details .booking-request{
+    padding: 20px;
+    border: 1px solid var(--text-color-30);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px 0px #0000001A;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-img,
+.booking-process-wrapper .other-details .booking-request .booking-info,
+.booking-process-wrapper .other-details .booking-request .booking-form table{
+    margin-bottom: 10px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-img img{
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-info h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-info p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-11);
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-info p i{
+    font-size: 20px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group{
+    position: relative;
+    width: 48%;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group input{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-7);
+    background: var(--transparent);
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    padding: 6px 40px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder{
+    max-width: 220px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box{
+    padding: 0 5px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table{
+    font-size: 12px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker--focused .picker__day--highlighted, 
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--highlighted:hover, 
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--infocus:hover, 
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--outfocus:hover,
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--highlighted,
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table.picker--focused .picker__day--selected, 
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--selected, 
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--selected:hover{
+    background: var(--heading-color);
+    border-radius: 100px;
+    color: var(--white) !important;
+    border-color: var(--heading-color);
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--today:before{
+    display: none;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day{
+    color: var(--text-color-12);
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__table .picker__day--outfocus{
+    color: var(--text-color-15)
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group .picker__holder .picker__box .picker__footer{
+    display: none;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group::before{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: url('../images/calendar-days.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group::after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url('../images/chevron-up.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+}
+
+.booking-process-wrapper .other-details .location-request .location-form form .form-group::before{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: url('../images/search.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.calendar-open::after{
+    transform: rotate(180deg);
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table tr th,
+.booking-process-wrapper .other-details .booking-request .booking-form form table tr td{
+    padding-bottom: 5px;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table thead tr th{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table tbody tr td{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table tbody tr td.price-desc{
+    text-align: left;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table tbody tr td.price{
+    text-align: right;
+    font-weight: 600;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form table tbody tr.total td{
+    font-weight: 600;
+}
+
+.booking-process-wrapper .other-details .booking-request .booking-form form .form-group.promo-code button:hover{
+    background: var(--black);
+}
+
+/* Booking Process Page CSS Ends */
