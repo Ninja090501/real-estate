@@ -152,18 +152,23 @@
         let btn = document.getElementById("toggle-btn");
         let btnFacility = document.getElementById("facilities-toggle-btn");
         let fullText = document.getElementById("full-text");
+        let fullTextFacilities = document.getElementById("full-text-facilities");
 
-        if (btn && btnFacility && fullText) {  // Added null check
-            fullText.addEventListener("show.bs.collapse", function () {
-                btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
-                btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
-            });
+        fullText.addEventListener("show.bs.collapse", function () {
+            btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
+        });
 
-            fullText.addEventListener("hide.bs.collapse", function () {
-                btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
-                btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
-            });
-        }
+        fullText.addEventListener("hide.bs.collapse", function () {
+            btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
+        });
+        
+        fullTextFacilities.addEventListener("show.bs.collapse", function () {
+            btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
+        });
+        
+        fullTextFacilities.addEventListener("hide.bs.collapse", function () {
+            btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
+        });
     });
 
     $(document).ready(function () {

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.js">
+
+    <link rel="stylesheet" href="./css/classic.css">
+    <link rel="stylesheet" href="./css/classic.date.css">
+ 
+
+    <!-- Slick JS CSS -->
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./slick-1.8.1/slick/slick-theme.css">
+</head>
+<body>
+    
+    <!-- Header Section Starts -->
+    <div class="header-section-wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="Real Estate Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="menu-list">
+                        <ul>
+                            <li><a href="index.html" class="">Home</a></li>
+                            <li><a href="#" class="">Landlords</a></li>
+                            <li><a href="#" class="">Erasmus Life</a></li>
+                            <li><a href="about-us.html" class="">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="login-section">
+                        <ul>
+                            <!-- <li><a href="login.html">Log in</a></li> -->
+                            <li><a href="#"><img src="./images/lang-icon.png" alt="Language Icon"></a></li>
+                        </ul>
+                        <a href="#" class="btn btn-user"><img src="images/Oval.png" alt="" /> Anna Karlsson <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="user-account-list">
+                            <ul class="user-menu">
+                                <li class="user-info">
+                                    <div class="user-img">
+                                        <a href="#"><img src="images/Oval.png" alt=""></a>
+                                    </div>
+    
+                                    <div class="user-content">
+                                        <a href="#"><h2>Anna Karlsson</h2></a>
+                                        <h5>anna@mail.com</h5>
+                                    </div>
+                                </li>
+                                <li class="user-menu-item"><a href="my-account.html"><img src="images/settings.png" alt="" /> Account</a></li>
+                                <li class="user-menu-item"><a href="#"><img src="images/arrow-up-on-square-stack.png" alt="" /> Room Applications</a></li>
+                                <li class="user-menu-item"><a href="#"><img src="images/Heart.png" alt="" /> Compare Favourites</a></li>
+                                <li class="user-menu-item"><a href="login.html"><img src="images/sign out.png" alt="" /> Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section Ends -->
+
+    <!-- My Account Section Starts -->
+    <div class="my-account-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="my-account">
+                        <div class="user-profile">
+                            <img src="images/Oval150-150.png" alt="">
+                            <h2>Anna Karlsson</h2>
+                            <h5>anna.karlsson@gmail.com</h5>
+                            <form action="#">
+                                <label for="upload">Upload new Picture</label>
+                                <input type="file" name="upload" id="upload">
+                            </form>                        
+                        </div>
+
+                        <div class="notification">
+                            <h2>Notifications Center</h2>
+                            <ul>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    SMS
+                                </li>
+    
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    Email
+                                </li>
+    
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    Phone
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="delete-account">
+                            <a href="#">Delete Account</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="my-user-details">
+                        <div class="basic-info">
+                            <form action="#">
+                                <div class="header">
+                                    <h2>Basic Info</h2>
+                                    <button class="btn btn-edit">Edit</button>
+                                </div>
+
+                                <div class="form-group names">
+                                    <div class="form-control">
+                                        <label for="fnm">First Name</label>
+                                        <input type="text" name="fnm" id="fnm">
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="lnm">Last Name</label>
+                                        <input type="text" name="lnm" id="lnm">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-control">
+                                        <label for="gender">Gender</label>
+                                        <select name="gender" id="gender">
+                                            <option value="gender">Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-control">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email">
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="pno">Phone Number</label>
+                                        <input type="text" name="pno" id="pno">
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="nationality">Nationality</label>
+                                        <select name="nationality" id="nationality">
+                                            <option value="nationality">Nationality</option>
+                                            <option value="in">India</option>
+                                            <option value="usa">USA</option>
+                                            <option value="uk">UK</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="currentaddress">Current Address</label>
+                                        <input type="text" name="currentaddress" id="currentaddress">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="booking-request-message">
+                            <form action="#">
+                                <div class="header">
+                                    <h2>Booking Request Message</h2>
+                                    <button class="btn btn-edit">Edit</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-control">
+                                        <textarea name="message" id="message" placeholder="Enter a description..." rows="8"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="additional-details-docu">
+                            <form action="#">
+                                <div class="header">
+                                    <h2>Additional Details & Documents</h2>
+                                    <button class="btn btn-edit">Edit</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-control">
+                                        <label for="studywork">Gender</label>
+                                        <select name="studywork" id="studywork">
+                                            <option value="">Do You Study or Work?</option>
+                                            <option value="study">Study</option>
+                                            <option value="work">Work</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="wherestudy">Where Are You Studing?</label>
+                                        <input type="text" name="wherestudy" id="wherestudy">
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="findstay">How Will You Fund Your Stay?</label>
+                                        <input type="text" name="findstay" id="findstay">
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="yourself" class="big-heading">Nationality</label>
+                                        <textarea name="yourself" id="yourself" rows="5"></textarea>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="documents" class="big-heading">Documents <span>(Password/ID Card)</span></label>
+                                        <label class="custom-file-upload">
+                                            <span>Upload File</span>
+                                            <input type="file" name="documents" id="documents">
+                                        </label>
+                                    
+                                        <label class="custom-file-upload">
+                                            <span>Upload File</span>
+                                            <input type="file" name="documents" id="documents">
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- My Account Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <div class="footer-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-info">
+                        <img src="./images/logo.png" alt="Site Logo">
+                        <h2>Find Your Dream Accommodation</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-navigation">
+                        <h2>Navigation</h2>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Erasmus Life Lisboa</a></li>
+                            <li><a href="#">Apply For Internship</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-navigation">
+                        <h2>Tenants</h2>
+                        <ul>
+                            <li><a href="#">Video Chat</a></li>
+                            <li><a href="#">Housing Guide</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-resources">
+                        <h2>Resources</h2>
+                        <p>Travessa da Cara, 14, 1200-089 Lisbon - Portugal</p>
+
+                        <p><a href="tel:+351 932 483 834">+351 932 483 834</a></p>
+                            
+                        <p><a href="mailto:hello@erasmuslifehousing.com">hello@erasmuslifehousing.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section Ends -->
+    
+    <!-- JQuery Library File -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+
+    <script src="./js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="./js/jquery.slicknav.js"></script>
+    <!-- Smooth Scroll JS -->
+    <script src="./js/SmoothScroll.js"></script>
+    <!-- Slick JS JS -->
+    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    
+    <script src="./js/picker.js"></script>
+    <script src="./js/picker.date.js"></script>
+        
+    <!-- Main Custom JS -->
+    <script src="./js/function.js"></script>
+</body>
+</html>

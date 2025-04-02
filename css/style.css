@@ -215,6 +215,8 @@
     --text-color-29: #999999;
     --text-color-30: #9BA7D2;
     --text-color-31: #F9F5FF;
+    --text-color-32: #6C6C6C;
+    --text-color-33: #6074B7;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -267,7 +269,8 @@ a{
 a:focus,
 button:focus,
 input:focus,
-select:focus{
+select:focus,
+textarea:focus{
     outline: none;
     box-shadow: none;
 }
@@ -3053,6 +3056,15 @@ select:focus{
     transform: scaleY(1);
 }
 
+.details-section-wrapper .details-section .details-facilities div#facilities .collapse.show{
+    display: contents;
+}
+
+.details-section-wrapper .details-section .details-description p#description .collapse:has(.show),
+.details-section-wrapper .details-section .details-facilities div#facilities .collapse:has(.show){
+    display: contents !important;
+}
+
 .details-section-wrapper .details-section .details-availability .availability-content{
     display: flex;
     flex-wrap: wrap;
@@ -3976,3 +3988,325 @@ select:focus{
 }
 
 /* Booking Process Page CSS Ends */
+
+/* My Account Details Page CSS Starts */
+
+.my-account-section-wrapper{
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.my-account-section-wrapper .container{
+    max-width: 1000px !important;
+}
+
+.my-account-section-wrapper .my-account{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.my-account-section-wrapper .my-account .user-profile img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.my-account-section-wrapper .my-account .user-profile h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.my-account-section-wrapper .my-account .user-profile h5{
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--text-color-32);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.my-account-section-wrapper .my-account .user-profile form input{
+    display: none;
+}
+
+
+.my-account-section-wrapper .my-account .user-profile form label{
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--heading-color);
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.my-account-section-wrapper .my-account .user-profile form label:hover{
+    background: var(--black);
+}
+
+.my-account-section-wrapper .my-account .notification{
+    margin-top: 10px;
+}
+
+.my-account-section-wrapper .my-account .notification h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.my-account-section-wrapper .my-account .notification ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 40%;
+}
+
+.my-account-section-wrapper .my-account .notification ul li{
+    list-style-type: none;
+}
+
+.my-account-section-wrapper .my-account .notification ul li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--text-color-15);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--white);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch input:checked + .slider {
+    background-color: var(--text-color-33);
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch .slider.round {
+    border-radius: 34px;
+}
+
+.my-account-section-wrapper .my-account .notification ul li .switch .slider.round:before {
+    border-radius: 50%;
+}
+
+.my-account-section-wrapper .my-account .delete-account{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.my-account-section-wrapper .my-account .delete-account a{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--text-color-27);
+    border-radius: 8px;
+    transition: all .3s;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.my-account-section-wrapper .my-account .delete-account a:hover{
+    background: var(--black);
+}
+
+.my-account-section-wrapper .my-user-details .basic-info,
+.my-account-section-wrapper .my-user-details .booking-request-message{
+    margin-bottom: 20px;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .header,
+.my-account-section-wrapper .my-user-details .booking-request-message .header,
+.my-account-section-wrapper .my-user-details .additional-details-docu .header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .header h2,
+.my-account-section-wrapper .my-user-details .booking-request-message .header h2,
+.my-account-section-wrapper .my-user-details .additional-details-docu .header h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .header button,
+.my-account-section-wrapper .my-user-details .booking-request-message .header button,
+.my-account-section-wrapper .my-user-details .additional-details-docu .header button{
+    font-size:  14px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--heading-color);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all .3s;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .header button:hover,
+.my-account-section-wrapper .my-user-details .booking-request-message .header button:hover,
+.my-account-section-wrapper .my-user-details .additional-details-docu .header button:hover{
+    background: var(--black);
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control{
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control label,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control label,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control label{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control label.big-heading,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control label.big-heading,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control label.big-heading{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control label.big-heading span,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control label.big-heading span,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control label.big-heading span{
+    color: var(--text-color-11);
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group.names{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group.names .form-control{
+    width: 49%;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control input,
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control textarea,
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control select,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control input,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control textarea,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control select,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control input,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control textarea,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control select{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: 1px solid var(--border-color-1);
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    margin-bottom: 10px;
+}
+
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control .custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color-1);
+    padding: 10px 15px 10px 40px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--white);
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    position: relative;
+}
+
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control .custom-file-upload:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--border-color-1);
+}
+
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control .custom-file-upload input {
+    display: none;
+}
+
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control input::placeholder,
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control textarea::placeholder,
+.my-account-section-wrapper .my-user-details .basic-info .form-group .form-control select::placeholder,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control input::placeholder,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control textarea::placeholder,
+.my-account-section-wrapper .my-user-details .booking-request-message .form-group .form-control select::placeholder,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control input::placeholder,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control textarea::placeholder,
+.my-account-section-wrapper .my-user-details .additional-details-docu .form-group .form-control select::placeholder{
+    color: var(--text-color)
+}
+/* My Account Details Page CSS Ends */
