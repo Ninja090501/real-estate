@@ -242,7 +242,49 @@
                 arrowIcon.style.transform = "rotate(0deg)";
             }
         });
-    });   
+    });
+
+    // Compare Hide and Show Map or Points Sections.
+    document.addEventListener("DOMContentLoaded", function () {
+        const boxes = [1, 2, 3]; // Box numbers
+    
+        boxes.forEach(num => {
+            const checkbox = document.querySelector(`#box_${num} .switch input[type='checkbox']`);
+            const pointsList = document.querySelector(`#box_${num} .points-list`);
+            const mapSection = document.querySelector(`#box_${num} .map`);
+    
+            function toggleSections() {
+                if (checkbox.checked) {
+                    pointsList.style.display = "none";
+                    mapSection.style.display = "block";
+                } else {
+                    pointsList.style.display = "block";
+                    mapSection.style.display = "none";
+                }
+            }
+    
+            // Initial call to set correct display on load
+            toggleSections();
+    
+            // Add event listener for checkbox change
+            checkbox.addEventListener("change", toggleSections);
+        });
+    });
+    
+    // Compare Box Remove JS.
+    document.addEventListener("DOMContentLoaded", function () {
+        const closeButtons = document.querySelectorAll(".btn-close");
+    
+        closeButtons.forEach(button => {
+            button.addEventListener("click", function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                const box = this.closest(".box");
+                if (box) {
+                    box.remove(); // Remove the box from DOM
+                }
+            });
+        });
+    });
     
 
 })(jQuery);

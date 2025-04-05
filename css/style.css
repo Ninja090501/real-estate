@@ -217,6 +217,11 @@
     --text-color-31: #F9F5FF;
     --text-color-32: #6C6C6C;
     --text-color-33: #6074B7;
+    --text-color-34: #F6372B;
+    --text-color-35: #F9F9F9;
+    --text-color-36: #3C3C3C;
+    --text-color-37: #FEF3F2;
+    --text-color-38: #B42318;
 
     --black: #000000;
     --white: #FFFFFF;
@@ -4310,3 +4315,455 @@ textarea:focus{
     color: var(--text-color)
 }
 /* My Account Details Page CSS Ends */
+
+/* Favourites Page CSS Starts */
+
+.favourite-section-wrapper{
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.favourite-section-wrapper .favourite-section > h2,
+.compare-section-wrapper .compare-heading h2{
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.favourite-section-wrapper .favourite-section > h2{
+    text-align: center;
+}
+
+.favourite-section-wrapper .favourite-section .items{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.favourite-section-wrapper .favourite-section .items .item{
+    width: calc( 33.33% - 13.33px );
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid var(--text-color-22);
+    border-radius: 5px;
+    background: var(--white);
+}
+
+.favourite-section-wrapper .favourite-section .items .item:nth-of-type( 3n + 3 ){
+    margin-right: 0;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-img{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-img img{
+    aspect-ratio: 1/0.7;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-img .heart{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all .3s;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-img .heart i{
+    color: var(--text-color-34);
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-head{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-head a{
+    text-decoration: none;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-head h2{
+    width: 70%;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color-18);
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-head p{
+    width: 30%;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-color-12);
+    line-height: 1.2em;
+    text-align: right;
+    margin: 0;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-head p span{
+    font-weight: 400;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-content p{
+    font-size: 12px;
+    font-weight: 12px;
+    color: var(--text-color-5);
+    line-height: 1.4em;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-content ul li{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+    background: var(--text-color-15);
+    border-radius: 16px;
+    padding: 2px 8px;
+    margin-right: 5px;
+}
+
+.favourite-section-wrapper .favourite-section .items .item .item-content ul li img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.compare-section-wrapper{
+    padding: 80px 0;
+    background: var(--text-color-35);
+}
+
+.compare-section-wrapper .compare-heading h2{
+    text-align: left;
+}
+
+.compare-section-wrapper .compare-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.compare-section-wrapper .compare-box .box{
+    width: calc( 33.33% - 13.66px );
+    margin-right: 20px;
+    padding: 15px 16px;
+    border-radius: 10px;
+    background: var(--text-color-23);
+    text-align: right;
+}
+
+.compare-section-wrapper .compare-box .box:nth-of-type( 3n + 3 ){
+    margin-right: 0;
+}
+
+.compare-section-wrapper .compare-box .box .btn-close,
+.compare-section-wrapper .compare-box .box .box-img,
+.compare-section-wrapper .compare-box .box .box-content,
+.compare-section-wrapper .compare-box .box .box-facility,
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list table,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .bedrooms-points,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .kitchen-points,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .living-room-points,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .other-points{
+    margin-bottom: 10px;
+}
+
+.compare-section-wrapper .compare-box .box .box-img img{
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.compare-section-wrapper .compare-box .box .box-content{
+    text-align: left;
+}
+
+.compare-section-wrapper .compare-box .box .box-content h2{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.2em;
+}
+
+.compare-section-wrapper .compare-box .box .box-content p{
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-color-12);
+    line-height: 1.4em;
+}
+
+.compare-section-wrapper .compare-box .box .box-facility ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.compare-section-wrapper .compare-box .box .box-facility ul li{
+    list-style-type: none;
+    background: var(--white);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.2em;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.compare-section-wrapper .compare-box .box .box-facility ul li img{
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--text-color-15);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--white);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch input:checked + .slider {
+    background-color: var(--text-color-33);
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch .slider.round {
+    border-radius: 34px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .box-switch .switch .slider.round:before {
+    border-radius: 50%;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list table{
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+    list-style: 1.2em;
+}
+.compare-section-wrapper .compare-box .box .box-attributs .points-list table tr td{
+    padding: 5px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list table tr td:nth-child(1){
+    text-align: left;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list table tr td:nth-child(2){
+    text-align: right;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .bedrooms-points h2,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .kitchen-points h2,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .living-room-points h2,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .other-points h2,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .availability-points h2,
+.compare-section-wrapper .compare-box .box .box-attributs .map h2{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .bedrooms-points ul,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .kitchen-points ul,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .living-room-points ul,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .other-points ul{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .bedrooms-points ul li,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .kitchen-points ul li,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .living-room-points ul li,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .other-points ul li{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-2);
+    line-height: 1.2em;
+    background: var(--text-color-15);
+    border-radius: 16px;
+    padding: 2px 8px;
+    margin: 0 5px 5px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .bedrooms-points ul li.no-check,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .kitchen-points ul li.no-check,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .living-room-points ul li.no-check,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .other-points ul li.no-check{
+    background: var(--text-color-37);
+    color: var(--text-color-38);
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .bedrooms-points ul li img,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .kitchen-points ul li img,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .living-room-points ul li img,
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .other-points ul li img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .availability-points ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .availability-points ul li{
+    list-style-type: none; 
+    width: 15%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--text-color);
+    background: var(--text-color-25);
+    line-height: 1.2em;
+    padding: 9px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .availability-points ul li:last-of-type( 6n + 6 ){
+    margin-right: 0;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .availability-points ul li.reserved{
+    background: var(--text-color-26);
+    color: var(--text-color-27);
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .points-list .availability-points ul li.booked{
+    background: var(--text-color-11);
+    color: var(--text-color-24);
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .map p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-11);
+    line-height: 1.2em;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .map img{
+    width: 100%;
+    height: 312px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .map{
+    display: none;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .map ul{
+    margin: 0;
+    padding: 0;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .map ul li{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-11);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+    list-style-type: none;
+}
+
+.compare-section-wrapper .compare-box .box .box-attributs .map ul li span{
+    font-weight: 700;
+}
+/* Favourites Page CSS Ends */
