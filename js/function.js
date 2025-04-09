@@ -154,21 +154,25 @@
         let fullText = document.getElementById("full-text");
         let fullTextFacilities = document.getElementById("full-text-facilities");
 
-        fullText.addEventListener("show.bs.collapse", function () {
-            btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
-        });
+        if( fullText ){
+            fullText.addEventListener("show.bs.collapse", function () {
+                btn.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
+            });
 
-        fullText.addEventListener("hide.bs.collapse", function () {
-            btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
-        });
+            fullText.addEventListener("hide.bs.collapse", function () {
+                btn.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
+            });
+        }
         
-        fullTextFacilities.addEventListener("show.bs.collapse", function () {
-            btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
-        });
-        
-        fullTextFacilities.addEventListener("hide.bs.collapse", function () {
-            btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
-        });
+        if( fullTextFacilities ){
+            fullTextFacilities.addEventListener("show.bs.collapse", function () {
+                btnFacility.innerHTML = "Show less  <i class='fa fa-arrow-up'></i>";
+            });
+            
+            fullTextFacilities.addEventListener("hide.bs.collapse", function () {
+                btnFacility.innerHTML = "Show more <i class='fa fa-arrow-down'></i>";
+            });
+        }
     });
 
     $(document).ready(function () {
@@ -252,22 +256,21 @@
             const checkbox = document.querySelector(`#box_${num} .switch input[type='checkbox']`);
             const pointsList = document.querySelector(`#box_${num} .points-list`);
             const mapSection = document.querySelector(`#box_${num} .map`);
-    
-            function toggleSections() {
-                if (checkbox.checked) {
-                    pointsList.style.display = "none";
-                    mapSection.style.display = "block";
-                } else {
-                    pointsList.style.display = "block";
-                    mapSection.style.display = "none";
+        
+            if (checkbox && pointsList && mapSection) {
+                function toggleSections() {
+                    if (checkbox.checked) {
+                        pointsList.style.display = "none";
+                        mapSection.style.display = "block";
+                    } else {
+                        pointsList.style.display = "block";
+                        mapSection.style.display = "none";
+                    }
                 }
+        
+                toggleSections();
+                checkbox.addEventListener("change", toggleSections);
             }
-    
-            // Initial call to set correct display on load
-            toggleSections();
-    
-            // Add event listener for checkbox change
-            checkbox.addEventListener("change", toggleSections);
         });
     });
     
@@ -286,5 +289,63 @@
         });
     });
     
+    // Applications Lists Table JS Code.
+    // Select All functionality
+    document.getElementById("selectall").addEventListener("change", function () {
+        const checkboxes = document.querySelectorAll(".row-checkbox");
+        checkboxes.forEach(cb => cb.checked = this.checked);
+    });
+
+    // Toggle row details
+    document.querySelectorAll(".toggle-icon").forEach(icon => {
+        icon.addEventListener("click", function () {
+        const rowId = this.getAttribute("data-bs-toggle");
+        const detailRow = document.getElementById(rowId);
+        const isVisible = detailRow.style.display === "table-row";
+    
+        // Hide all detail rows and remove rotations/highlight
+        document.querySelectorAll(".details-row").forEach(row => row.style.display = "none");
+        document.querySelectorAll(".toggle-icon").forEach(i => i.classList.remove("rotate"));
+        document.querySelectorAll("tr").forEach(row => row.classList.remove("active-row"));
+    
+        if (!isVisible) {
+            detailRow.style.display = "table-row";
+            this.classList.add("rotate");
+    
+            // Highlight the parent <tr>
+            const parentRow = this.closest("tr");
+            if (parentRow) {
+            parentRow.classList.add("active-row");
+            }
+        }
+        });
+    });
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all open buttons by their ID prefix
+        document.querySelectorAll('[id^="openCanclePopup_"]').forEach(button => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const btnId = this.id.split("_")[1]; // get the number after underscore
+            const popup = document.getElementById(`canclePopup_${btnId}`);
+            if (popup) {
+              popup.classList.add("show");
+            }
+          });
+        });
+      
+        // Close all popups when close icon is clicked
+        document.querySelectorAll('[id^="closePopup_"]').forEach(button => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const btnId = this.id.split("_")[1];
+            const popup = document.getElementById(`canclePopup_${btnId}`);
+            if (popup) {
+              popup.classList.remove("show");
+            }
+          });
+        });
+      });
+        
 
 })(jQuery);
